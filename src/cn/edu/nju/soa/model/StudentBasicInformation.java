@@ -57,26 +57,26 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class StudentBasicInformation {
 
-    @XmlElement(required = true)
+    @XmlElement(name="学号", required = true)
     protected String sid;
-    @XmlElement(required = true)
+    @XmlElement(name="姓名", required = true)
     protected String name;
-    @XmlElement(required = true)
+    @XmlElement(name="性别", required = true)
     @XmlSchemaType(name = "string")
     protected Sex gender;
-    @XmlElement(required = true)
+    @XmlElement(name="出生日期", required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar birthday;
-    @XmlElement(required = true)
+    @XmlElement(name="身份证号", required = true)
     protected String pid;
-    @XmlElement(required = true)
+    @XmlElement(name="专业", required = true)
     protected String major;
-    @XmlElement(required = true)
+    @XmlElement(name="入学时间", required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar admissionTime;
-    @XmlElement(required = true)
+    @XmlElement(name="联系方式", required = true)
     protected String phone;
-    @XmlElement(required = true)
+    @XmlElement(name="学籍状态", required = true)
     @XmlSchemaType(name = "string")
     protected StudentStatusType studentStatus;
 

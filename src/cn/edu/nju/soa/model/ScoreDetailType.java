@@ -43,9 +43,9 @@ import java.util.List;
 })
 public class ScoreDetailType {
 
-    @XmlElement(required = true)
+    @XmlElement(name="课程成绩列表", required = true)
     protected cn.edu.nju.soa.model.CourseScoreList scoreList;
-    @XmlAttribute
+    @XmlAttribute(name="学期")
     protected Semester semester;
 
     /**
