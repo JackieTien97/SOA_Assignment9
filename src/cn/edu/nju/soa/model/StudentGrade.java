@@ -13,6 +13,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.List;
 
 
 /**
@@ -42,15 +43,15 @@ import javax.xml.bind.annotation.XmlType;
 public class StudentGrade {
 
     @XmlElement(name="学生", required = true)
-    protected StudentInfo student;
+    protected List<StudentInfo> student;
     @XmlAttribute(name="年级")
     protected GradeType grade;
 
-    public StudentInfo getStudent() {
+    public List<StudentInfo> getStudent() {
         return student;
     }
 
-    public void setStudent(StudentInfo student) {
+    public void setStudent(List<StudentInfo> student) {
         this.student = student;
     }
 
