@@ -28,20 +28,44 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "\u804c\u79f0\u7c7b\u578b")
+@XmlType(name = "职称类型")
 @XmlEnum
-public enum 职称类型 {
+public enum TitleType {
 
-    教授,
-    副教授,
-    讲师;
+    PROFESSOR,
+    VICEPROFESSOR,
+    TEACHER;
 
     public String value() {
-        return name();
+        String name="";
+        switch (this){
+            case PROFESSOR:
+                name =  "教授";
+                break;
+            case VICEPROFESSOR:
+                name =  "副教授";
+                break;
+            case TEACHER:
+                name =  "讲师";
+                break;
+        }
+        return name;
     }
 
-    public static 职称类型 fromValue(String v) {
-        return valueOf(v);
+    public static TitleType fromValue(String v) {
+        TitleType type = null;
+        switch(v){
+            case "教授":
+                type = TitleType.PROFESSOR;
+                break;
+            case "副教授":
+                type = TitleType.VICEPROFESSOR;
+                break;
+            case "讲师":
+                type = TitleType.TEACHER;
+                break;
+        }
+        return type;
     }
 
 }
