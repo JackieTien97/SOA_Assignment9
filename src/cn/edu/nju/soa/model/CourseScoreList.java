@@ -73,4 +73,7 @@ public class CourseScoreList {
         return this.courseScore;
     }
 
+    public void setCourseScore(List<CourseScore> courseScore) {
+        this.courseScore = courseScore;
+    }
 }

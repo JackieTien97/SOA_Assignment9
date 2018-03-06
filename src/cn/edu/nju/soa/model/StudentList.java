@@ -36,17 +36,17 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "学生列表类型", namespace = Namespace.JW_URI, propOrder = {
-    "facultyStudents"
+    "students"
 })
 public class StudentList {
 
-    protected List<cn.edu.nju.soa.model.StudentInfo> facultyStudents;
+    protected List<cn.edu.nju.soa.model.StudentInfo> students;
 
-    public List<cn.edu.nju.soa.model.StudentInfo> getFacultyStudents() {
-        return facultyStudents;
+    public List<StudentInfo> getStudents() {
+        return students;
     }
 
-    public void setFacultyStudents(List<cn.edu.nju.soa.model.StudentInfo> facultyStudents) {
-        this.facultyStudents = facultyStudents;
+    public void setStudents(List<StudentInfo> students) {
+        this.students = students;
     }
 }
