@@ -36,10 +36,10 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "成绩类型", propOrder = {
-    "\u5b66\u53f7",
-    "\u5f97\u5206"
+    "schoolNum",
+    "score"
 })
-public class scoreType {
+public class ScoreType {
 
     @XmlElement(required = true)
     protected String schoolNum;

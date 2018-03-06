@@ -32,7 +32,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlType(name = "成绩性质类型")
 @XmlEnum
-public enum scoreAttributeType {
+public enum ScoreAttributeType {
 
     NORMOL,
     HOMEWORK,
@@ -62,23 +62,23 @@ public enum scoreAttributeType {
         return name;
     }
 
-    public static scoreAttributeType fromValue(String v) {
-        scoreAttributeType type = null;
+    public static cn.edu.nju.soa.model.ScoreAttributeType fromValue(String v) {
+        cn.edu.nju.soa.model.ScoreAttributeType type = null;
         switch(v){
             case "平时成绩":
-                type = scoreAttributeType.NORMOL;
+                type = cn.edu.nju.soa.model.ScoreAttributeType.NORMOL;
                 break;
             case "作业成绩":
-                type = scoreAttributeType.HOMEWORK;
+                type = cn.edu.nju.soa.model.ScoreAttributeType.HOMEWORK;
                 break;
             case "期中成绩":
-                type = scoreAttributeType.MIDTERM;
+                type = cn.edu.nju.soa.model.ScoreAttributeType.MIDTERM;
                 break;
             case "期末成绩":
-                type = scoreAttributeType.FINAL;
+                type = cn.edu.nju.soa.model.ScoreAttributeType.FINAL;
                 break;
             case "总评成绩":
-                type = scoreAttributeType.TOTAL;
+                type = cn.edu.nju.soa.model.ScoreAttributeType.TOTAL;
                 break;
         }
         return type;

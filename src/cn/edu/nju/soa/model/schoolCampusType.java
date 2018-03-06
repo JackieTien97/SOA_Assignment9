@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlType(name = "校区类型", namespace = "http://www.nju.edu.cn/schema")
 @XmlEnum
-public enum schoolCampusType {
+public enum SchoolCampusType {
 
     GULOU,
     XIANLIN;
@@ -46,14 +46,14 @@ public enum schoolCampusType {
         return name;
     }
 
-    public static schoolCampusType fromValue(String v) {
-        schoolCampusType type = null;
+    public static cn.edu.nju.soa.model.SchoolCampusType fromValue(String v) {
+        cn.edu.nju.soa.model.SchoolCampusType type = null;
         switch(v){
             case "鼓楼":
-                type = schoolCampusType.GULOU;
+                type = cn.edu.nju.soa.model.SchoolCampusType.GULOU;
                 break;
             case "仙林":
-                type = schoolCampusType.XIANLIN;
+                type = cn.edu.nju.soa.model.SchoolCampusType.XIANLIN;
         }
         return type;
     }

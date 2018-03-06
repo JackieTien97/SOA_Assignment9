@@ -42,14 +42,14 @@ import javax.xml.datatype.XMLGregorianCalendar;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "教师信息类型", propOrder = {
-    "\u6559\u5de5\u53f7",
-    "\u6559\u5e08\u540d\u79f0",
-    "\u5e74\u9f84",
-    "\u5165\u804c\u5e74\u4efd",
-    "\u9662\u7cfb",
-    "\u804c\u79f0"
+    "teacherNum",
+    "teacherName",
+    "age",
+    "yearOfInduction",
+    "college",
+    "title"
 })
-public class teacherMessageType {
+public class TeacherMessageType {
 
     @XmlElement(required = true)
     protected String teacherNum;

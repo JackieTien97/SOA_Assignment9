@@ -37,14 +37,14 @@ import javax.xml.bind.annotation.XmlType;
  */
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "成绩详情类型", propOrder = {
-    "\u8bfe\u7a0b\u6210\u7ee9\u5217\u8868"
+    "scoreList","semester"
 })
-public class scoreDetailType {
+public class ScoreDetailType {
 
     @XmlElement(required = true)
     protected CourseScoreList scoreList;
     @XmlAttribute
-    protected 学期类型 semester;
+    protected Semester semester;
 
     /**
      * 获取课程成绩列表属性的值。
@@ -75,10 +75,10 @@ public class scoreDetailType {
      * 
      * @return
      *     possible object is
-     *     {@link 学期类型 }
+     *     {@link cn.edu.nju.soa.model.Semester }
      *     
      */
-    public 学期类型 getSemester() {
+    public Semester getSemester() {
         return semester;
     }
 
@@ -87,10 +87,10 @@ public class scoreDetailType {
      * 
      * @param value
      *     allowed object is
-     *     {@link 学期类型 }
+     *     {@link cn.edu.nju.soa.model.Semester }
      *     
      */
-    public void setSemester(学期类型 value) {
+    public void setSemester(Semester value) {
         this.semester = value;
     }
 
