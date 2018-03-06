@@ -39,9 +39,9 @@ import javax.xml.bind.annotation.*;
 })
 public class DepartmentStu {
 
-    @XmlElement(name="学生年级")
+    @XmlElement(name="学生年级",namespace = cn.edu.nju.soa.model.Namespace.JW_URI)
     protected List<cn.edu.nju.soa.model.StudentGradeType> stuGrade;
-    @XmlAttribute(name="院系编号")
+    @XmlAttribute(name="院系编号",namespace = cn.edu.nju.soa.model.Namespace.NJU_URI)
     protected String departmentId;
 
     /**

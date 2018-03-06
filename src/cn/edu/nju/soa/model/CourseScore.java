@@ -10,6 +10,7 @@ package cn.edu.nju.soa.model;
 
 import java.util.ArrayList;
 import java.util.List;
+import javax.naming.Name;
 import javax.xml.bind.annotation.*;
 
 
@@ -40,11 +41,11 @@ import javax.xml.bind.annotation.*;
 })
 public class CourseScore {
 
-    @XmlElement(name = "成绩")
+    @XmlElement(name = "成绩",namespace = cn.edu.nju.soa.model.Namespace.JW_URI)
     protected List<cn.edu.nju.soa.model.ScoreType> score;
-    @XmlAttribute(name="课程编号")
+    @XmlAttribute(name="课程编号",namespace = cn.edu.nju.soa.model.Namespace.JW_URI)
     protected String courseId;
-    @XmlAttribute(name="成绩性质")
+    @XmlAttribute(name="成绩性质",namespace = cn.edu.nju.soa.model.Namespace.JW_URI)
     protected cn.edu.nju.soa.model.ScoreAttributeType scoreType;
 
     /**

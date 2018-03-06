@@ -41,7 +41,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class CourseScoreList {
 
-    @XmlElement(name="课程成绩")
+    @XmlElement(name="课程成绩",namespace = cn.edu.nju.soa.model.Namespace.JW_URI)
     protected List<cn.edu.nju.soa.model.CourseScore> courseScore;
 
     /**

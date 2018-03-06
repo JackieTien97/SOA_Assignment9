@@ -48,16 +48,16 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class DepartmentInfo {
 
-    @XmlElement(name = "部门编号",required = true)
+    @XmlElement(name = "部门编号",required = true,namespace = cn.edu.nju.soa.model.Namespace.NJU_URI)
     protected String departmentId;
-    @XmlElement(name="部门名称",required = true)
+    @XmlElement(name="部门名称",required = true,namespace = cn.edu.nju.soa.model.Namespace.NJU_URI)
     protected String departmentName;
-    @XmlElement(name="部门电话",required = true)
+    @XmlElement(name="部门电话",required = true,namespace = cn.edu.nju.soa.model.Namespace.NJU_URI)
     protected String departmentTel;
-    @XmlElement(name="校区",required = true)
+    @XmlElement(name="校区",required = true,namespace = cn.edu.nju.soa.model.Namespace.NJU_URI)
     @XmlSchemaType(name = "string")
     protected cn.edu.nju.soa.model.SchoolCampusType campus;
-    @XmlElement(name="部门地址",required = true)
+    @XmlElement(name="部门地址",required = true,namespace = cn.edu.nju.soa.model.Namespace.NJU_URI)
     protected String departmentAddress;
 
     /**
