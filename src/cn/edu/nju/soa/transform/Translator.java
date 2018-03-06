@@ -20,7 +20,8 @@ public class Translator {
 
         List<CourseScore> tempList = studentList.getStudents().stream()
                 .flatMap(student -> student.getStudentScores().getScoreDetail().stream()
-                .flatMap(score -> score.getScoreList().getCourseScore().stream())).collect(Collectors.toList());
+                .flatMap(score -> score.getScoreList().getCourseScore().stream()))
+                .collect(Collectors.toList());
 
         List<CourseScore> resultList = new LinkedList<>();
         for (CourseScore courseScore: tempList) {
