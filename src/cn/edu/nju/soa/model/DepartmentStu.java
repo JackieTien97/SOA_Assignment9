@@ -44,6 +44,10 @@ public class DepartmentStu {
     @XmlAttribute(name="院系编号",namespace = cn.edu.nju.soa.model.Namespace.NJU_URI)
     protected String departmentId;
 
+    public DepartmentStu(List<String> infos){
+        
+    }
+
     /**
      * Gets the value of the 学生年级 property.
      * 
