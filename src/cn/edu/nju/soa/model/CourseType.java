@@ -28,7 +28,7 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "课程类型",namespace = NameSpace.JW_URI)
+@XmlType(name = "课程类型",namespace = cn.edu.nju.soa.model.Namespace.JW_URI)
 @XmlEnum
 public enum CourseType {
 

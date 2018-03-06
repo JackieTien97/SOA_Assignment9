@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "课程信息类型", namespace = NameSpace.JW_URI,propOrder = {
+@XmlType(name = "课程信息类型", namespace = cn.edu.nju.soa.model.Namespace.JW_URI,propOrder = {
         "courseId",
         "courseName",
         "courseTeacher",
@@ -58,7 +58,7 @@ public class CourseInfo {
     protected String courseTeacher;
 
     @XmlElement(name="上课时间与地点表",required = true)
-    protected 上课时间与地点表类型 timeNplace;
+    protected cn.edu.nju.soa.model.CourseTimeAndAddress timeNplace;
 
     @XmlElement(name="选课类型",required = true)
     @XmlSchemaType(name = "string")
@@ -141,10 +141,10 @@ public class CourseInfo {
      * 
      * @return
      *     possible object is
-     *     {@link 上课时间与地点表类型 }
+     *     {@link cn.edu.nju.soa.model.CourseTimeAndAddress }
      *     
      */
-    public 上课时间与地点表类型 getTimeNplace() {
+    public cn.edu.nju.soa.model.CourseTimeAndAddress getTimeNplace() {
         return this.timeNplace;
     }
 
@@ -153,10 +153,10 @@ public class CourseInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link 上课时间与地点表类型 }
+     *     {@link cn.edu.nju.soa.model.CourseTimeAndAddress }
      *     
      */
-    public void setTimeNplace(上课时间与地点表类型 value) {
+    public void setTimeNplace(cn.edu.nju.soa.model.CourseTimeAndAddress value) {
         this.timeNplace = value;
     }
 

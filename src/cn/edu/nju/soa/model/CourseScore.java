@@ -35,7 +35,7 @@ import javax.xml.bind.annotation.*;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "课程成绩类型", namespace = NameSpace.JW_URI, propOrder = {
+@XmlType(name = "课程成绩类型", namespace = cn.edu.nju.soa.model.Namespace.JW_URI, propOrder = {
     "score"
 })
 public class CourseScore {

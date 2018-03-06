@@ -34,7 +34,7 @@ import javax.xml.bind.annotation.*;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "院系学生类型", namespace = NameSpace.NJU_URI, propOrder = {
+@XmlType(name = "院系学生类型", namespace = cn.edu.nju.soa.model.Namespace.NJU_URI, propOrder = {
     "stuGrade"
 })
 public class DepartmentStu {

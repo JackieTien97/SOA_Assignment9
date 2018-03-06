@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "部门信息类型", namespace = NameSpace.NJU_URI, namespace = "http://www.nju.edu.cn/schema", propOrder = {
+@XmlType(name = "部门信息类型", namespace = cn.edu.nju.soa.model.Namespace.NJU_URI, namespace = "http://www.nju.edu.cn/schema", propOrder = {
         "departmentId",
         "departmentName",
         "departmentTel",
