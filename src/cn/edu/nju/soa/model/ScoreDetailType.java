@@ -70,7 +70,7 @@ public class ScoreDetailType {
         cn.edu.nju.soa.model.ScoreType scoreType=new cn.edu.nju.soa.model.ScoreType();
         scoreType.setScore(Integer.parseInt(infos[2]));
         scoreType.setSchoolNum(sid);
-        score.setScore(scoreType);
+        score.setScore(scoreTypes);
 
         this.scoreList=new cn.edu.nju.soa.model.CourseScoreList();
         ArrayList<cn.edu.nju.soa.model.CourseScore> courseScores=new ArrayList<>();
