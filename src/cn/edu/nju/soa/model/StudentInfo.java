@@ -12,6 +12,13 @@ import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
+import javax.xml.datatype.XMLGregorianCalendar;
+import java.sql.Date;
+import java.util.ArrayList;
+import java.util.GregorianCalendar;
+import java.util.List;
 
 
 /**
@@ -42,10 +49,38 @@ import javax.xml.bind.annotation.XmlType;
 public class StudentInfo {
 
     @XmlElement(name = "学生基本信息", namespace = Namespace.JW_URI, required = true)
-    protected StudentBasicInformation studentBasicInfo;
+    protected cn.edu.nju.soa.model.StudentBasicInformation studentBasicInfo;
     @XmlElement(name = "学生成绩", namespace = Namespace.JW_URI, required = true)
     protected StudentScore studentScores;
 
+    public StudentInfo(){
+
+    }
+
+    public StudentInfo(List<String> infoStr) throws DatatypeConfigurationException {
+        studentBasicInfo=new cn.edu.nju.soa.model.StudentBasicInformation();
+        studentBasicInfo.setSid(infoStr.get(0));
+        studentBasicInfo.setName(infoStr.get(1));
+        studentBasicInfo.setGender(cn.edu.nju.soa.model.Sex.fromValue(infoStr.get(2)));
+        GregorianCalendar gc1=new GregorianCalendar();
+        gc1.setTime(Date.valueOf(infoStr.get(3)));
+        studentBasicInfo.setBirthday(DatatypeFactory.newInstance()
+                .newXMLGregorianCalendar(gc1));
+        studentBasicInfo.setPid(infoStr.get(4));
+        GregorianCalendar gc2=new GregorianCalendar();
+        gc2.setTime(Date.valueOf(infoStr.get(5)));
+        studentBasicInfo.setAdmissionTime(DatatypeFactory.newInstance()
+                .newXMLGregorianCalendar(gc2));
+        studentBasicInfo.setPhone(infoStr.get(6));
+        studentBasicInfo.setMajor(infoStr.get(7));
+        studentScores=new cn.edu.nju.soa.model.StudentScore();
+
+        List<>
+        for(int i=8;i<infoStr.size();i++){
+            scores.add(infoStr.get(i));
+        }
+
+    }
     /**
      * 获取学生基本信息属性的值。
      * 
