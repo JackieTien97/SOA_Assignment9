@@ -2,6 +2,7 @@ package cn.edu.nju.soa.transform;
 
 
 import cn.edu.nju.soa.model.DepartmentStu;
+import cn.edu.nju.soa.model.StudentInfo;
 import cn.edu.nju.soa.model.StudentList;
 
 import java.io.*;
@@ -11,25 +12,28 @@ import java.util.List;
 public class Generator {
     private final static String path="./data";
 
-    public static StudentList generateData() throws FileNotFoundException {
-        File file = new File(path);
-        File[] files = file.listFiles();
+    public static cn.edu.nju.soa.model.StudentList generateData() throws FileNotFoundException {
+        File file=new File(path);
+        File[] files=file.listFiles();
 
-        List<cn.edu.nju.soa.model.DepartmentStu> stus = new ArrayList<>();
+        List<StudentInfo> stus=new ArrayList<>();
 
-        for (File curStu : files) {
-            if (curStu.getName().startsWith(".")) {
+        for (File curStu:files) {
+            if(curStu.getName().startsWith(".")){
                 continue;
             }
-            cn.edu.nju.soa.model.DepartmentStu student = getStudent(curStu);
-            if (student != null) {
+            StudentInfo student=getStudent(curStu);
+            if(student!=null){
                 stus.add(student);
             }
         }
-        return null;
+
+        cn.edu.nju.soa.model.StudentList studentList=new StudentList();
+        studentList.setFacultyStudents(stus);
+        return studentList;
     }
 
-    private static cn.edu.nju.soa.model.DepartmentStu getStudent(File file){
+    private static StudentInfo getStudent(File file){
         try{
             BufferedReader br=new BufferedReader(new FileReader(file));
             String line=null;
@@ -38,13 +42,12 @@ public class Generator {
                 list.add(line);
             }
             br.close();
-//            cn.edu.nju.soa.model.DepartmentStu student=new DepartmentStu(list);
-//            return student;
+            cn.edu.nju.soa.model.StudentInfo student=new StudentInfo(list);
+            return student;
         }catch (IOException ioe){
             ioe.printStackTrace();
             return null;
         }
-        return null;
     }
 
 
