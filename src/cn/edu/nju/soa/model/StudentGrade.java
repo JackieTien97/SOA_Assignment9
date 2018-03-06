@@ -39,7 +39,7 @@ import javax.xml.bind.annotation.XmlType;
 @XmlType(name = "学生年级类型", namespace = Namespace.JW_URI, propOrder = {
     "student", "grade"
 })
-public class StudentGradeType {
+public class StudentGrade {
 
     @XmlElement(required = true)
     protected StudentInfo student;

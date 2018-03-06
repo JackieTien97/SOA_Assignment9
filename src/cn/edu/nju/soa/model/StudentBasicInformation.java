@@ -55,7 +55,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "phone",
     "studentStatus"
 })
-public class StudentBasicInformationType {
+public class StudentBasicInformation {
 
     @XmlElement(required = true)
     protected String sid;
