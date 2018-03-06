@@ -8,11 +8,11 @@
 
 package cn.edu.nju.soa.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.List;
 
 
 /**
@@ -34,6 +34,7 @@ import javax.xml.bind.annotation.XmlType;
  * 
  * 
  */
+@XmlRootElement(name = "学生列表")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "学生列表类型", namespace = Namespace.JW_URI, propOrder = {
     "students"
