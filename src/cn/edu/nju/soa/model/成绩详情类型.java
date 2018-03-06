@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="课程成绩列表" type="{http://jw.nju.edu.cn/schema}课程成绩列表类型"/>
+ *         &lt;element name="课程成绩列表" type="{http://jw.nju.edu.cn/schema}CourseScoreList"/>
  *       &lt;/sequence>
  *       &lt;attribute name="学期" type="{http://jw.nju.edu.cn/schema}学期类型" />
  *     &lt;/restriction>

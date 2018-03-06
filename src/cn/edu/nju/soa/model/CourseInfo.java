@@ -29,7 +29,7 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="课程名称" type="{http://jw.nju.edu.cn/schema}课程名称类型"/>
  *         &lt;element name="授课教师" type="{http://www.nju.edu.cn/schema}人员名称类型"/>
  *         &lt;element name="上课时间与地点表" type="{http://jw.nju.edu.cn/schema}上课时间与地点表类型"/>
- *         &lt;element name="选课类型" type="{http://jw.nju.edu.cn/schema}课程类型"/>
+ *         &lt;element name="选课类型" type="{http://jw.nju.edu.cn/schema}CourseType"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -39,26 +39,30 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u8bfe\u7a0b\u4fe1\u606f\u7c7b\u578b", propOrder = {
-    "\u8bfe\u7a0b\u7f16\u53f7",
-    "\u8bfe\u7a0b\u540d\u79f0",
-    "\u6388\u8bfe\u6559\u5e08",
-    "\u4e0a\u8bfe\u65f6\u95f4\u4e0e\u5730\u70b9\u8868",
-    "\u9009\u8bfe\u7c7b\u578b"
+@XmlType(name = "课程信息类型", namespace = NameSpace.JW_URI,propOrder = {
+        "courseId",
+        "courseName",
+        "courseTeacher",
+        "timeNplace",
+        "choiceType"
 })
-public class 课程信息类型 {
+public class CourseInfo {
 
-    @XmlElement(required = true)
-    protected String 课程编号;
-    @XmlElement(required = true)
-    protected String 课程名称;
-    @XmlElement(required = true)
-    protected String 授课教师;
-    @XmlElement(required = true)
-    protected 上课时间与地点表类型 上课时间与地点表;
-    @XmlElement(required = true)
+    @XmlElement(name="课程编号",required = true)
+    protected String courseId;
+
+    @XmlElement(name="课程名称",required = true)
+    protected String courseName;
+
+    @XmlElement(name="授课教师",required = true)
+    protected String courseTeacher;
+
+    @XmlElement(name="上课时间与地点表",required = true)
+    protected 上课时间与地点表类型 timeNplace;
+
+    @XmlElement(name="选课类型",required = true)
     @XmlSchemaType(name = "string")
-    protected 课程类型 选课类型;
+    protected cn.edu.nju.soa.model.CourseType choiceType;
 
     /**
      * 获取课程编号属性的值。
@@ -68,8 +72,8 @@ public class 课程信息类型 {
      *     {@link String }
      *     
      */
-    public String get课程编号() {
-        return 课程编号;
+    public String getCourseId() {
+        return this.courseId;
     }
 
     /**
@@ -80,8 +84,8 @@ public class 课程信息类型 {
      *     {@link String }
      *     
      */
-    public void set课程编号(String value) {
-        this.课程编号 = value;
+    public void setCourseId(String value) {
+        this.courseId = value;
     }
 
     /**
@@ -92,8 +96,8 @@ public class 课程信息类型 {
      *     {@link String }
      *     
      */
-    public String get课程名称() {
-        return 课程名称;
+    public String getCourseName() {
+        return this.courseName;
     }
 
     /**
@@ -104,8 +108,8 @@ public class 课程信息类型 {
      *     {@link String }
      *     
      */
-    public void set课程名称(String value) {
-        this.课程名称 = value;
+    public void setCourseName(String value) {
+        this.courseName = value;
     }
 
     /**
@@ -116,8 +120,8 @@ public class 课程信息类型 {
      *     {@link String }
      *     
      */
-    public String get授课教师() {
-        return 授课教师;
+    public String getCourseTeacher() {
+        return this.courseTeacher;
     }
 
     /**
@@ -128,8 +132,8 @@ public class 课程信息类型 {
      *     {@link String }
      *     
      */
-    public void set授课教师(String value) {
-        this.授课教师 = value;
+    public void setCourseTeacher(String value) {
+        this.courseTeacher = value;
     }
 
     /**
@@ -140,8 +144,8 @@ public class 课程信息类型 {
      *     {@link 上课时间与地点表类型 }
      *     
      */
-    public 上课时间与地点表类型 get上课时间与地点表() {
-        return 上课时间与地点表;
+    public 上课时间与地点表类型 getTimeNplace() {
+        return this.timeNplace;
     }
 
     /**
@@ -152,8 +156,8 @@ public class 课程信息类型 {
      *     {@link 上课时间与地点表类型 }
      *     
      */
-    public void set上课时间与地点表(上课时间与地点表类型 value) {
-        this.上课时间与地点表 = value;
+    public void setTimeNplace(上课时间与地点表类型 value) {
+        this.timeNplace = value;
     }
 
     /**
@@ -161,11 +165,11 @@ public class 课程信息类型 {
      * 
      * @return
      *     possible object is
-     *     {@link 课程类型 }
+     *     {@link cn.edu.nju.soa.model.CourseType }
      *     
      */
-    public 课程类型 get选课类型() {
-        return 选课类型;
+    public cn.edu.nju.soa.model.CourseType getChoiceType() {
+        return this.choiceType;
     }
 
     /**
@@ -173,11 +177,11 @@ public class 课程信息类型 {
      * 
      * @param value
      *     allowed object is
-     *     {@link 课程类型 }
+     *     {@link cn.edu.nju.soa.model.CourseType }
      *     
      */
-    public void set选课类型(课程类型 value) {
-        this.选课类型 = value;
+    public void setChoiceType(cn.edu.nju.soa.model.CourseType value) {
+        this.choiceType = value;
     }
 
 }
