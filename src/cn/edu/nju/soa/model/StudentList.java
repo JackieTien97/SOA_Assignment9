@@ -16,16 +16,16 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>学生成绩类型 complex type的 Java 类。
+ * <p>学生列表类型 complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="学生成绩类型">
+ * &lt;complexType name="学生列表类型">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence maxOccurs="8" minOccurs="0">
- *         &lt;element name="成绩详情" type="{http://jw.nju.edu.cn/schema}成绩详情类型"/>
+ *       &lt;sequence maxOccurs="45" minOccurs="0">
+ *         &lt;element name="院系学生" type="{http://jw.nju.edu.cn/schema}DepartmentStu"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,18 +35,18 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "学生成绩类型", namespace = Namespace.JW_URI, propOrder = {
-    "scoreDetail"
+@XmlType(name = "学生列表类型", namespace = Namespace.JW_URI, propOrder = {
+    "facultyStudents"
 })
-public class StudentScoreType {
+public class StudentList {
 
-    protected List<scoreDetailType> scoreDetail;
+    protected List<cn.edu.nju.soa.model.StudentInfo> facultyStudents;
 
-    public List<scoreDetailType> getScoreDetail() {
-        return scoreDetail;
+    public List<cn.edu.nju.soa.model.StudentInfo> getFacultyStudents() {
+        return facultyStudents;
     }
 
-    public void setScoreDetail(List<scoreDetailType> scoreDetail) {
-        this.scoreDetail = scoreDetail;
+    public void setFacultyStudents(List<cn.edu.nju.soa.model.StudentInfo> facultyStudents) {
+        this.facultyStudents = facultyStudents;
     }
 }

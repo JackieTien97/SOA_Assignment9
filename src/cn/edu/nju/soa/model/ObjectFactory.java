@@ -63,11 +63,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link StudentListType }
+     * Create an instance of {@link StudentList }
      * 
      */
-    public StudentListType createStudentListType() {
-        return new StudentListType();
+    public StudentList createStudentList() {
+        return new StudentList();
     }
 
     /**
@@ -87,19 +87,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link StudentGradeType }
+     * Create an instance of {@link StudentGrade }
      * 
      */
-    public StudentGradeType createStudentGradeType() {
-        return new StudentGradeType();
+    public StudentGrade createStudentGrade() {
+        return new StudentGrade();
     }
 
     /**
-     * Create an instance of {@link StudentScoreType }
+     * Create an instance of {@link StudentScore }
      * 
      */
-    public StudentScoreType createStudentScoreType() {
-        return new StudentScoreType();
+    public StudentScore createStudentScore() {
+        return new StudentScore();
     }
 
     /**
@@ -111,11 +111,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link StudentBasicInformationType }
+     * Create an instance of {@link StudentBasicInformation }
      * 
      */
-    public StudentBasicInformationType createStudentBasicInformationType() {
-        return new StudentBasicInformationType();
+    public StudentBasicInformation createStudentBasicInformation() {
+        return new StudentBasicInformation();
     }
 
     /**
@@ -194,12 +194,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link StudentListType }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentList }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://jw.nju.edu.cn/schema", name = "学生列表")
-    public JAXBElement<StudentListType> createStudentListType(StudentListType value) {
-        return new JAXBElement<StudentListType>(_STUDENT_LIST_QNAME, StudentListType.class, null, value);
+    public JAXBElement<StudentList> createStudentListType(StudentList value) {
+        return new JAXBElement<StudentList>(_STUDENT_LIST_QNAME, StudentList.class, null, value);
     }
 
     /**
@@ -216,7 +216,7 @@ public class ObjectFactory {
      * 
      */
     @XmlElementDecl(namespace = "http://jw.nju.edu.cn/schema", name = "教师信息")
-    public JAXBElement<TeacherInfoType> createTeacherMessageType(TeacherInfoType value) {
+    public JAXBElement<TeacherInfoType> createTeacherInfoType(TeacherInfoType value) {
         return new JAXBElement<TeacherInfoType>(_TEACHER_INFO_QNAME, TeacherInfoType.class, null, value);
     }
 
