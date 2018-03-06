@@ -18,7 +18,7 @@ import javax.xml.bind.annotation.XmlType;
  * <p>以下模式片段指定包含在此类中的预期内容。
  * <p>
  * <pre>
- * &lt;simpleType name="课程类型">
+ * &lt;simpleType name="CourseType">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
  *     &lt;enumeration value="核心"/>
  *     &lt;enumeration value="平台"/>
@@ -28,20 +28,38 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "\u8bfe\u7a0b\u7c7b\u578b")
+@XmlType(name = "课程类型",namespace = cn.edu.nju.soa.model.Namespace.JW_URI)
 @XmlEnum
-public enum 课程类型 {
+public enum CourseType {
 
-    核心,
-    平台,
-    选修;
+    KERNEL,
+    PLATFORM,
+    OPTIONAL;
 
     public String value() {
-        return name();
+        String name="";
+        switch (this){
+            case KERNEL:
+                name="核心";
+            case PLATFORM:
+                name="平台";
+            case OPTIONAL:
+                name="选修";
+        }
+        return name;
     }
 
-    public static 课程类型 fromValue(String v) {
-        return valueOf(v);
+    public static cn.edu.nju.soa.model.CourseType fromValue(String v) {
+        CourseType type=null;
+        switch (v){
+            case "核心":
+                type=CourseType.KERNEL;
+            case "平台":
+                type=CourseType.PLATFORM;
+            case "选修":
+                type=CourseType.OPTIONAL;
+        }
+        return type;
     }
 
 }

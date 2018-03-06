@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence maxOccurs="45" minOccurs="0">
- *         &lt;element name="院系学生" type="{http://jw.nju.edu.cn/schema}院系学生类型"/>
+ *         &lt;element name="院系学生" type="{http://jw.nju.edu.cn/schema}DepartmentStu"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>

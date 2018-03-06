@@ -21,7 +21,7 @@
 		</restriction>
 	</simpleType>
 
-	<complexType name="课程成绩列表类型">
+	<complexType name="CourseScoreList">
 		<sequence minOccurs="0" maxOccurs="unbounded">
             <element name="课程成绩" type="tns:课程成绩类型"/>
 		</sequence>
@@ -30,7 +30,7 @@
     <element name="课程成绩列表" type="tns:课程成绩列表类型"/>
 
 
-	<complexType name="课程成绩类型">
+	<complexType name="CourseScore">
 		<sequence minOccurs="0" maxOccurs="unbounded">
 			<element name="成绩" type="tns:成绩类型">
 

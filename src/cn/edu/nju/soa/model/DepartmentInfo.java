@@ -16,12 +16,12 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>部门信息类型 complex type的 Java 类。
+ * <p>DepartmentInfo complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="部门信息类型">
+ * &lt;complexType name="DepartmentInfo">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
@@ -39,26 +39,26 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u90e8\u95e8\u4fe1\u606f\u7c7b\u578b", namespace = "http://www.nju.edu.cn/schema", propOrder = {
-    "\u90e8\u95e8\u7f16\u53f7",
-    "\u90e8\u95e8\u540d\u79f0",
-    "\u90e8\u95e8\u7535\u8bdd",
-    "\u6821\u533a",
-    "\u90e8\u95e8\u5730\u5740"
+@XmlType(name = "部门信息类型", namespace = cn.edu.nju.soa.model.Namespace.NJU_URI, namespace = "http://www.nju.edu.cn/schema", propOrder = {
+        "departmentId",
+        "departmentName",
+        "departmentTel",
+        "campus",
+        "departmentAddress"
 })
-public class 部门信息类型 {
+public class DepartmentInfo {
 
-    @XmlElement(required = true)
-    protected String 部门编号;
-    @XmlElement(required = true)
-    protected String 部门名称;
-    @XmlElement(required = true)
-    protected String 部门电话;
-    @XmlElement(required = true)
+    @XmlElement(name = "部门编号",required = true)
+    protected String departmentId;
+    @XmlElement(name="部门名称",required = true)
+    protected String departmentName;
+    @XmlElement(name="部门电话",required = true)
+    protected String departmentTel;
+    @XmlElement(name="校区",required = true)
     @XmlSchemaType(name = "string")
-    protected 校区类型 校区;
-    @XmlElement(required = true)
-    protected String 部门地址;
+    protected cn.edu.nju.soa.model.SchoolCampusType campus;
+    @XmlElement(name="部门地址",required = true)
+    protected String departmentAddress;
 
     /**
      * 获取部门编号属性的值。
@@ -68,8 +68,8 @@ public class 部门信息类型 {
      *     {@link String }
      *     
      */
-    public String get部门编号() {
-        return 部门编号;
+    public String getDepartmentId() {
+        return this.departmentId;
     }
 
     /**
@@ -80,8 +80,8 @@ public class 部门信息类型 {
      *     {@link String }
      *     
      */
-    public void set部门编号(String value) {
-        this.部门编号 = value;
+    public void setDepartmentId(String value) {
+        this.departmentId = value;
     }
 
     /**
@@ -92,8 +92,8 @@ public class 部门信息类型 {
      *     {@link String }
      *     
      */
-    public String get部门名称() {
-        return 部门名称;
+    public String getDepartmentName() {
+        return this.departmentName;
     }
 
     /**
@@ -104,8 +104,8 @@ public class 部门信息类型 {
      *     {@link String }
      *     
      */
-    public void set部门名称(String value) {
-        this.部门名称 = value;
+    public void setDepartmentName(String value) {
+        this.departmentName = value;
     }
 
     /**
@@ -116,8 +116,8 @@ public class 部门信息类型 {
      *     {@link String }
      *     
      */
-    public String get部门电话() {
-        return 部门电话;
+    public String getDepartmentTel() {
+        return this.departmentTel;
     }
 
     /**
@@ -128,8 +128,8 @@ public class 部门信息类型 {
      *     {@link String }
      *     
      */
-    public void set部门电话(String value) {
-        this.部门电话 = value;
+    public void setDepartmentTel(String value) {
+        this.departmentTel = value;
     }
 
     /**
@@ -137,11 +137,11 @@ public class 部门信息类型 {
      * 
      * @return
      *     possible object is
-     *     {@link 校区类型 }
+     *     {@link cn.edu.nju.soa.model.SchoolCampusType }
      *     
      */
-    public 校区类型 get校区() {
-        return 校区;
+    public cn.edu.nju.soa.model.SchoolCampusType getCampus() {
+        return this.campus;
     }
 
     /**
@@ -149,11 +149,11 @@ public class 部门信息类型 {
      * 
      * @param value
      *     allowed object is
-     *     {@link 校区类型 }
+     *     {@link cn.edu.nju.soa.model.SchoolCampusType }
      *     
      */
-    public void set校区(校区类型 value) {
-        this.校区 = value;
+    public void setCampus(cn.edu.nju.soa.model.SchoolCampusType value) {
+        this.campus = value;
     }
 
     /**
@@ -164,8 +164,8 @@ public class 部门信息类型 {
      *     {@link String }
      *     
      */
-    public String get部门地址() {
-        return 部门地址;
+    public String getDepartmentAddress() {
+        return departmentAddress;
     }
 
     /**
@@ -176,8 +176,8 @@ public class 部门信息类型 {
      *     {@link String }
      *     
      */
-    public void set部门地址(String value) {
-        this.部门地址 = value;
+    public void setDepartmentAddress(String value) {
+        this.departmentAddress = value;
     }
 
 }

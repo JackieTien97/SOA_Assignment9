@@ -12,20 +12,21 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>课程成绩列表类型 complex type的 Java 类。
+ * <p>CourseScoreList complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="课程成绩列表类型">
+ * &lt;complexType name="CourseScoreList">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence maxOccurs="unbounded" minOccurs="0">
- *         &lt;element name="课程成绩" type="{http://jw.nju.edu.cn/schema}课程成绩类型"/>
+ *         &lt;element name="课程成绩" type="{http://jw.nju.edu.cn/schema}CourseScore"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,12 +36,13 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u8bfe\u7a0b\u6210\u7ee9\u5217\u8868\u7c7b\u578b", propOrder = {
-    "\u8bfe\u7a0b\u6210\u7ee9"
+@XmlType(name = "课程成绩列表类型", namespace = cn.edu.nju.soa.model.Namespace.JW_URI, propOrder = {
+    "courseScore"
 })
-public class 课程成绩列表类型 {
+public class CourseScoreList {
 
-    protected List<课程成绩类型> 课程成绩;
+    @XmlElement(name="课程成绩")
+    protected List<cn.edu.nju.soa.model.CourseScore> courseScore;
 
     /**
      * Gets the value of the 课程成绩 property.
@@ -60,15 +62,15 @@ public class 课程成绩列表类型 {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link 课程成绩类型 }
+     * {@link cn.edu.nju.soa.model.CourseScore }
      * 
      * 
      */
-    public List<课程成绩类型> get课程成绩() {
-        if (课程成绩 == null) {
-            课程成绩 = new ArrayList<课程成绩类型>();
+    public List<cn.edu.nju.soa.model.CourseScore> getCourseScore() {
+        if (this.courseScore == null) {
+            this.courseScore = new ArrayList<cn.edu.nju.soa.model.CourseScore>();
         }
-        return this.课程成绩;
+        return this.courseScore;
     }
 
 }

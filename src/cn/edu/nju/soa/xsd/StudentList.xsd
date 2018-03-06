@@ -17,7 +17,7 @@
 	<element name="学生列表" type="tns:学生列表类型"/>
 
 
-	<complexType name="院系学生类型">
+	<complexType name="DepartmentStu">
 		<sequence minOccurs="0" maxOccurs="4">
 			<element name="学生年级" type="tns:学生年级类型"/>
 		</sequence>

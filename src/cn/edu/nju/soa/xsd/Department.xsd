@@ -37,7 +37,7 @@
         </restriction>
     </simpleType>
     
-    <complexType name="部门信息类型">
+    <complexType name="DepartmentInfo">
         <sequence>
             <element name="部门编号" type="nju:部门编号类型"/>
             <element name="部门名称" type="nju:部门名称类型"/>
