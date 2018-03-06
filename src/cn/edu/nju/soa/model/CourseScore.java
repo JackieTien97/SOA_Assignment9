@@ -48,81 +48,27 @@ public class CourseScore {
     @XmlAttribute(name="成绩性质",namespace = cn.edu.nju.soa.model.Namespace.JW_URI)
     protected cn.edu.nju.soa.model.ScoreAttributeType scoreType;
 
-    /**
-     * Gets the value of the 成绩 property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the 成绩 property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    get成绩().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link cn.edu.nju.soa.model.ScoreType }
-     * 
-     * 
-     */
-    public List<cn.edu.nju.soa.model.ScoreType> getScore() {
-        if (this.score == null) {
-            this.score = new ArrayList<cn.edu.nju.soa.model.ScoreType>();
-        }
-        return this.score;
+    public List<ScoreType> getScore() {
+        return score;
     }
 
-    /**
-     * 获取课程编号属性的值。
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
+    public void setScore(List<ScoreType> score) {
+        this.score = score;
+    }
+
     public String getCourseId() {
-        return this.courseId;
+        return courseId;
     }
 
-    /**
-     * 设置课程编号属性的值。
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCourseId(String value) {
-        this.courseId = value;
+    public void setCourseId(String courseId) {
+        this.courseId = courseId;
     }
 
-    /**
-     * 获取成绩性质属性的值。
-     * 
-     * @return
-     *     possible object is
-     *     {@link cn.edu.nju.soa.model.ScoreAttributeType }
-     *     
-     */
-    public cn.edu.nju.soa.model.ScoreAttributeType getScoreType() {
-        return this.scoreType;
+    public ScoreAttributeType getScoreType() {
+        return scoreType;
     }
 
-    /**
-     * 设置成绩性质属性的值。
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link cn.edu.nju.soa.model.ScoreAttributeType }
-     *     
-     */
-    public void setScoreType(cn.edu.nju.soa.model.ScoreAttributeType value) {
-        this.scoreType = value;
+    public void setScoreType(ScoreAttributeType scoreType) {
+        this.scoreType = scoreType;
     }
-
 }
