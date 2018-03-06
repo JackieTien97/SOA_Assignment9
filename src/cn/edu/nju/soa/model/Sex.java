@@ -13,35 +13,47 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>人员职务类型的 Java 类。
+ * <p>人员性别类型的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * <p>
  * <pre>
- * &lt;simpleType name="人员职务类型">
+ * &lt;simpleType name="人员性别类型">
  *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="学生"/>
- *     &lt;enumeration value="老师"/>
- *     &lt;enumeration value="职工"/>
+ *     &lt;enumeration value="男"/>
+ *     &lt;enumeration value="女"/>
  *   &lt;/restriction>
  * &lt;/simpleType>
  * </pre>
  * 
  */
-@XmlType(name = "\u4eba\u5458\u804c\u52a1\u7c7b\u578b", namespace = "http://www.nju.edu.cn/schema")
+@XmlType(name = "人员性别类型", namespace = "http://www.nju.edu.cn/schema")
 @XmlEnum
-public enum 人员职务类型 {
+public enum Sex {
 
-    学生,
-    老师,
-    职工;
+    MALE,
+    FEMALE;
 
     public String value() {
-        return name();
+        switch (this) {
+            case MALE:
+                return "男";
+            case FEMALE:
+                return "女";
+            default:
+                return null;
+        }
     }
 
-    public static 人员职务类型 fromValue(String v) {
-        return valueOf(v);
+    public static Sex fromValue(String v) {
+        switch (v) {
+            case "男":
+                return MALE;
+            case "女":
+                return FEMALE;
+            default:
+                return null;
+        }
     }
 
 }

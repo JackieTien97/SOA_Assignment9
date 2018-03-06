@@ -12,20 +12,21 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>学生列表类型 complex type的 Java 类。
+ * <p>CourseScoreList complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="学生列表类型">
+ * &lt;complexType name="CourseScoreList">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence maxOccurs="45" minOccurs="0">
- *         &lt;element name="院系学生" type="{http://jw.nju.edu.cn/schema}院系学生类型"/>
+ *       &lt;sequence maxOccurs="unbounded" minOccurs="0">
+ *         &lt;element name="课程成绩" type="{http://jw.nju.edu.cn/schema}CourseScore"/>
  *       &lt;/sequence>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -35,40 +36,41 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u5b66\u751f\u5217\u8868\u7c7b\u578b", propOrder = {
-    "\u9662\u7cfb\u5b66\u751f"
+@XmlType(name = "课程成绩列表类型", namespace = cn.edu.nju.soa.model.Namespace.JW_URI, propOrder = {
+    "courseScore"
 })
-public class 学生列表类型 {
+public class CourseScoreList {
 
-    protected List<院系学生类型> 院系学生;
+    @XmlElement(name="课程成绩")
+    protected List<cn.edu.nju.soa.model.CourseScore> courseScore;
 
     /**
-     * Gets the value of the 院系学生 property.
+     * Gets the value of the 课程成绩 property.
      * 
      * <p>
      * This accessor method returns a reference to the live list,
      * not a snapshot. Therefore any modification you make to the
      * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the 院系学生 property.
+     * This is why there is not a <CODE>set</CODE> method for the 课程成绩 property.
      * 
      * <p>
      * For example, to add a new item, do as follows:
      * <pre>
-     *    get院系学生().add(newItem);
+     *    get课程成绩().add(newItem);
      * </pre>
      * 
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link 院系学生类型 }
+     * {@link cn.edu.nju.soa.model.CourseScore }
      * 
      * 
      */
-    public List<院系学生类型> get院系学生() {
-        if (院系学生 == null) {
-            院系学生 = new ArrayList<院系学生类型>();
+    public List<cn.edu.nju.soa.model.CourseScore> getCourseScore() {
+        if (this.courseScore == null) {
+            this.courseScore = new ArrayList<cn.edu.nju.soa.model.CourseScore>();
         }
-        return this.院系学生;
+        return this.courseScore;
     }
 
 }

@@ -27,19 +27,33 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "\u5b66\u7c4d\u72b6\u6001\u7c7b\u578b")
+@XmlType(name = "学籍状态类型", namespace = Namespace.JW_URI)
 @XmlEnum
-public enum 学籍状态类型 {
+public enum StudentStatusType {
 
-    有,
-    无;
+    YES,
+    NO;
 
     public String value() {
-        return name();
+        switch (this) {
+            case YES:
+                return "是";
+            case NO:
+                return "否";
+            default:
+                return null;
+        }
     }
 
-    public static 学籍状态类型 fromValue(String v) {
-        return valueOf(v);
+    public static StudentStatusType fromValue(String v) {
+        switch (v) {
+            case "是":
+                return YES;
+            case "否":
+                return NO;
+            default:
+                return null;
+        }
     }
 
 }

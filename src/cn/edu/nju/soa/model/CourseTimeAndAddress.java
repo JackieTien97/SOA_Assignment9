@@ -8,12 +8,12 @@
 
 package cn.edu.nju.soa.model;
 
-import java.util.ArrayList;
-import java.util.List;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -36,13 +36,13 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u4e0a\u8bfe\u65f6\u95f4\u4e0e\u5730\u70b9\u8868\u7c7b\u578b", propOrder = {
-    "\u4e0a\u8bfe\u65f6\u95f4\u4e0e\u5730\u70b9"
+@XmlType(name = "上课时间与地点表类型", namespace = Namespace.JW_URI, propOrder = {
+    "courseTimeAndAddress"
 })
-public class 上课时间与地点表类型 {
+public class CourseTimeAndAddress {
 
-    @XmlElement(required = true)
-    protected List<String> 上课时间与地点;
+    @XmlElement(name = "上课时间与地点", namespace = Namespace.JW_URI, required = true)
+    protected List<String> courseTimeAndAddress;
 
     /**
      * Gets the value of the 上课时间与地点 property.
@@ -66,11 +66,11 @@ public class 上课时间与地点表类型 {
      * 
      * 
      */
-    public List<String> get上课时间与地点() {
-        if (上课时间与地点 == null) {
-            上课时间与地点 = new ArrayList<String>();
+    public List<String> getCourseTimeAndAddress() {
+        if (courseTimeAndAddress == null) {
+            courseTimeAndAddress = new ArrayList<String>();
         }
-        return this.上课时间与地点;
+        return this.courseTimeAndAddress;
     }
 
 }

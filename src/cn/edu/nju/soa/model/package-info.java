@@ -5,5 +5,14 @@
 // 生成时间: 2018.03.06 时间 03:21:28 PM CST 
 //
 
-@javax.xml.bind.annotation.XmlSchema(namespace = "http://jw.nju.edu.cn/schema", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
+
+@XmlSchema(
+        xmlns = {
+                @XmlNs(prefix = Namespace.JW_PREFIX, namespaceURI = Namespace.JW_URI),
+                @XmlNs(prefix = Namespace.NJU_PREFIX, namespaceURI = Namespace.NJU_URI)
+        }
+)
 package cn.edu.nju.soa.model;
+
+import javax.xml.bind.annotation.XmlNs;
+import javax.xml.bind.annotation.XmlSchema;
