@@ -44,41 +44,42 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u4eba\u5458\u4fe1\u606f\u7c7b\u578b", namespace = "http://www.nju.edu.cn/schema", propOrder = {
-    "\u59d3\u540d",
-    "\u4eba\u5458\u804c\u52a1",
-    "\u4eba\u5458\u5e74\u9f84",
-    "\u51fa\u751f\u65e5\u671f",
-    "\u6027\u522b",
-    "\u8eab\u4efd\u8bc1\u53f7",
-    "\u624b\u673a\u53f7\u7c7b\u578b",
-    "\u5165\u6821\u65f6\u95f4",
-    "\u90e8\u95e8\u540d\u79f0"
+@XmlType(name = "人员信息类型", namespace = Namespace.NJU_URI, propOrder = {
+    "name",
+    "duty",
+    "age",
+    "birthDate",
+    "sex",
+    "pid",
+    "phoneNumber",
+    "inTime",
+    "industryTitle"
 })
-public class 人员信息类型 {
+public class PersonInfo {
 
-    @XmlElement(required = true)
-    protected String 姓名;
-    @XmlElement(required = true)
+    @XmlElement(name = "姓名", namespace = Namespace.NJU_URI, required = true)
+    protected String name;
+    @XmlElement(name = "人员职务", namespace = Namespace.NJU_URI, required = true)
     @XmlSchemaType(name = "string")
-    protected 人员职务类型 人员职务;
+    protected Duty duty;
+    @XmlElement(name = "人员年龄", namespace = Namespace.NJU_URI, required = true)
     @XmlSchemaType(name = "integer")
-    protected int 人员年龄;
-    @XmlElement(required = true)
+    protected int age;
+    @XmlElement(name = "出生日期", namespace = Namespace.NJU_URI, required = true)
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar 出生日期;
-    @XmlElement(required = true)
+    protected XMLGregorianCalendar birthDate;
+    @XmlElement(name = "性别", namespace = Namespace.NJU_URI, required = true)
     @XmlSchemaType(name = "string")
-    protected 人员性别类型 性别;
-    @XmlElement(required = true)
-    protected String 身份证号;
-    @XmlElement(required = true)
-    protected String 手机号类型;
-    @XmlElement(required = true)
+    protected Sex sex;
+    @XmlElement(name = "身份证号", namespace = Namespace.NJU_URI, required = true)
+    protected String pid;
+    @XmlElement(name="手机号类型", namespace = Namespace.NJU_URI, required = true)
+    protected String phoneNumber;
+    @XmlElement(name = "入校时间", namespace = Namespace.NJU_URI, required = true)
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar 入校时间;
-    @XmlElement(required = true)
-    protected String 部门名称;
+    protected XMLGregorianCalendar inTime;
+    @XmlElement(name = "部门名称", namespace = Namespace.NJU_URI, required = true)
+    protected String industryTitle;
 
     /**
      * 获取姓名属性的值。
@@ -88,8 +89,8 @@ public class 人员信息类型 {
      *     {@link String }
      *     
      */
-    public String get姓名() {
-        return 姓名;
+    public String getName() {
+        return name;
     }
 
     /**
@@ -100,8 +101,8 @@ public class 人员信息类型 {
      *     {@link String }
      *     
      */
-    public void set姓名(String value) {
-        this.姓名 = value;
+    public void setName(String value) {
+        this.name = value;
     }
 
     /**
@@ -109,11 +110,11 @@ public class 人员信息类型 {
      * 
      * @return
      *     possible object is
-     *     {@link 人员职务类型 }
+     *     {@link Duty }
      *     
      */
-    public 人员职务类型 get人员职务() {
-        return 人员职务;
+    public Duty getDuty() {
+        return duty;
     }
 
     /**
@@ -121,27 +122,27 @@ public class 人员信息类型 {
      * 
      * @param value
      *     allowed object is
-     *     {@link 人员职务类型 }
+     *     {@link Duty }
      *     
      */
-    public void set人员职务(人员职务类型 value) {
-        this.人员职务 = value;
+    public void setDuty(Duty value) {
+        this.duty = value;
     }
 
     /**
      * 获取人员年龄属性的值。
      * 
      */
-    public int get人员年龄() {
-        return 人员年龄;
+    public int getAge() {
+        return age;
     }
 
     /**
      * 设置人员年龄属性的值。
      * 
      */
-    public void set人员年龄(int value) {
-        this.人员年龄 = value;
+    public void setAge(int value) {
+        this.age = value;
     }
 
     /**
@@ -152,8 +153,8 @@ public class 人员信息类型 {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar get出生日期() {
-        return 出生日期;
+    public XMLGregorianCalendar getBirthDate() {
+        return birthDate;
     }
 
     /**
@@ -164,8 +165,8 @@ public class 人员信息类型 {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void set出生日期(XMLGregorianCalendar value) {
-        this.出生日期 = value;
+    public void setBirthDate(XMLGregorianCalendar value) {
+        this.birthDate = value;
     }
 
     /**
@@ -173,11 +174,11 @@ public class 人员信息类型 {
      * 
      * @return
      *     possible object is
-     *     {@link 人员性别类型 }
+     *     {@link Sex }
      *     
      */
-    public 人员性别类型 get性别() {
-        return 性别;
+    public Sex getSex() {
+        return sex;
     }
 
     /**
@@ -185,11 +186,11 @@ public class 人员信息类型 {
      * 
      * @param value
      *     allowed object is
-     *     {@link 人员性别类型 }
+     *     {@link Sex }
      *     
      */
-    public void set性别(人员性别类型 value) {
-        this.性别 = value;
+    public void setSex(Sex value) {
+        this.sex = value;
     }
 
     /**
@@ -200,8 +201,8 @@ public class 人员信息类型 {
      *     {@link String }
      *     
      */
-    public String get身份证号() {
-        return 身份证号;
+    public String getPid() {
+        return pid;
     }
 
     /**
@@ -212,8 +213,8 @@ public class 人员信息类型 {
      *     {@link String }
      *     
      */
-    public void set身份证号(String value) {
-        this.身份证号 = value;
+    public void setPid(String value) {
+        this.pid = value;
     }
 
     /**
@@ -224,8 +225,8 @@ public class 人员信息类型 {
      *     {@link String }
      *     
      */
-    public String get手机号类型() {
-        return 手机号类型;
+    public String getPhoneNumber() {
+        return phoneNumber;
     }
 
     /**
@@ -236,8 +237,8 @@ public class 人员信息类型 {
      *     {@link String }
      *     
      */
-    public void set手机号类型(String value) {
-        this.手机号类型 = value;
+    public void setPhoneNumber(String value) {
+        this.phoneNumber = value;
     }
 
     /**
@@ -248,8 +249,8 @@ public class 人员信息类型 {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar get入校时间() {
-        return 入校时间;
+    public XMLGregorianCalendar getInTime() {
+        return inTime;
     }
 
     /**
@@ -260,8 +261,8 @@ public class 人员信息类型 {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void set入校时间(XMLGregorianCalendar value) {
-        this.入校时间 = value;
+    public void setInTime(XMLGregorianCalendar value) {
+        this.inTime = value;
     }
 
     /**
@@ -272,8 +273,8 @@ public class 人员信息类型 {
      *     {@link String }
      *     
      */
-    public String get部门名称() {
-        return 部门名称;
+    public String getIndustryTitle() {
+        return industryTitle;
     }
 
     /**
@@ -284,8 +285,8 @@ public class 人员信息类型 {
      *     {@link String }
      *     
      */
-    public void set部门名称(String value) {
-        this.部门名称 = value;
+    public void setIndustryTitle(String value) {
+        this.industryTitle = value;
     }
 
 }

@@ -35,27 +35,27 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u5b66\u751f\u4fe1\u606f\u7c7b\u578b", propOrder = {
-    "\u5b66\u751f\u57fa\u672c\u4fe1\u606f",
-    "\u5b66\u751f\u6210\u7ee9"
+@XmlType(name = "学生信息类型",namespace = Namespace.JW_URI, propOrder = {
+    "studentBasicInfo",
+    "studentScores"
 })
-public class 学生信息类型 {
+public class StudentInfo {
 
-    @XmlElement(required = true)
-    protected 学生基本信息类型 学生基本信息;
-    @XmlElement(required = true)
-    protected 学生成绩类型 学生成绩;
+    @XmlElement(name = "学生基本信息", namespace = Namespace.JW_URI, required = true)
+    protected 学生基本信息类型 studentBasicInfo;
+    @XmlElement(name = "学生成绩", namespace = Namespace.JW_URI, required = true)
+    protected 学生成绩类型 studentScores;
 
     /**
      * 获取学生基本信息属性的值。
      * 
      * @return
      *     possible object is
-     *     {@link 学生基本信息类型 }
+     *     {@link StudentBasicInformationType }
      *     
      */
-    public 学生基本信息类型 get学生基本信息() {
-        return 学生基本信息;
+    public StudentBasicInformationType getStudentBasicInfo() {
+        return studentBasicInfo;
     }
 
     /**
@@ -66,8 +66,8 @@ public class 学生信息类型 {
      *     {@link 学生基本信息类型 }
      *     
      */
-    public void set学生基本信息(学生基本信息类型 value) {
-        this.学生基本信息 = value;
+    public void setStudentBasicInfo(StudentBasicInformationType value) {
+        this.studentBasicInfo = value;
     }
 
     /**
@@ -78,8 +78,8 @@ public class 学生信息类型 {
      *     {@link 学生成绩类型 }
      *     
      */
-    public 学生成绩类型 get学生成绩() {
-        return 学生成绩;
+    public StudentScoreType getStudentScores() {
+        return studentScores;
     }
 
     /**
@@ -87,11 +87,11 @@ public class 学生信息类型 {
      * 
      * @param value
      *     allowed object is
-     *     {@link 学生成绩类型 }
+     *     {@link StudentScoreType }
      *     
      */
-    public void set学生成绩(学生成绩类型 value) {
-        this.学生成绩 = value;
+    public void setStudentScores(StudentScoreType value) {
+        this.studentScores = value;
     }
 
 }
