@@ -40,13 +40,9 @@ import javax.xml.bind.annotation.*;
 public class DepartmentStu {
 
     @XmlElement(name="学生年级",namespace = cn.edu.nju.soa.model.Namespace.JW_URI)
-    protected List<StudentGrade> stuGrade;
+    protected List<cn.edu.nju.soa.model.StudentGrade> stuGrade;
     @XmlAttribute(name="院系编号",namespace = cn.edu.nju.soa.model.Namespace.NJU_URI)
     protected String departmentId;
-
-    public DepartmentStu(List<String> infos){
-        
-    }
 
     /**
      * Gets the value of the 学生年级 property.
@@ -66,13 +62,13 @@ public class DepartmentStu {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link StudentGrade }
+     * {@link cn.edu.nju.soa.model.StudentGrade }
      * 
      * 
      */
-    public List<StudentGrade> getStuGrade() {
+    public List<cn.edu.nju.soa.model.StudentGrade> getStuGrade() {
         if (this.stuGrade == null) {
-            stuGrade = new ArrayList<StudentGrade>();
+            stuGrade = new ArrayList<cn.edu.nju.soa.model.StudentGrade>();
         }
         return this.stuGrade;
     }
