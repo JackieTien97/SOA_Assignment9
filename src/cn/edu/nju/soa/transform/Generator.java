@@ -37,7 +37,10 @@ public class Generator {
         sg.setStudent(stus);
         sg.setGrade(cn.edu.nju.soa.model.GradeType.SENIORYEAR);
         departmentStu.setDepartmentId("1250");
-//        studentList.setStudents(stus);
+        List<DepartmentStu> departmentStus=new ArrayList<>();
+        departmentStus.add(departmentStu);
+        studentList.setStudents(departmentStus);
+
         return studentList;
     }
 
