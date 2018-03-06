@@ -10,19 +10,16 @@ package cn.edu.nju.soa.model;
 
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 
 
 /**
- * <p>院系学生类型 complex type的 Java 类。
+ * <p>DepartmentStu complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="院系学生类型">
+ * &lt;complexType name="DepartmentStu">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence maxOccurs="4" minOccurs="0">
@@ -37,14 +34,15 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u9662\u7cfb\u5b66\u751f\u7c7b\u578b", propOrder = {
-    "\u5b66\u751f\u5e74\u7ea7"
+@XmlType(name = "院系学生类型", namespace = cn.edu.nju.soa.model.Namespace.NJU_URI, propOrder = {
+    "stuGrade"
 })
-public class 院系学生类型 {
+public class DepartmentStu {
 
-    protected List<学生年级类型> 学生年级;
-    @XmlAttribute
-    protected String 院系编号;
+    @XmlElement(name="学生年级")
+    protected List<cn.edu.nju.soa.model.StudentGradeType> stuGrade;
+    @XmlAttribute(name="院系编号")
+    protected String departmentId;
 
     /**
      * Gets the value of the 学生年级 property.
@@ -64,15 +62,15 @@ public class 院系学生类型 {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link 学生年级类型 }
+     * {@link cn.edu.nju.soa.model.StudentGradeType }
      * 
      * 
      */
-    public List<学生年级类型> get学生年级() {
-        if (学生年级 == null) {
-            学生年级 = new ArrayList<学生年级类型>();
+    public List<cn.edu.nju.soa.model.StudentGradeType> getStuGrade() {
+        if (this.stuGrade == null) {
+            stuGrade = new ArrayList<cn.edu.nju.soa.model.StudentGradeType>();
         }
-        return this.学生年级;
+        return this.stuGrade;
     }
 
     /**
@@ -83,8 +81,8 @@ public class 院系学生类型 {
      *     {@link String }
      *     
      */
-    public String get院系编号() {
-        return 院系编号;
+    public String getDepartmentId() {
+        return this.departmentId;
     }
 
     /**
@@ -95,8 +93,8 @@ public class 院系学生类型 {
      *     {@link String }
      *     
      */
-    public void set院系编号(String value) {
-        this.院系编号 = value;
+    public void setDepartmentId(String value) {
+        this.departmentId = value;
     }
 
 }

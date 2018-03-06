@@ -36,62 +36,29 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u5b66\u751f\u5e74\u7ea7\u7c7b\u578b", propOrder = {
-    "\u5b66\u751f"
+@XmlType(name = "学生年级类型", namespace = Namespace.JW_URI, propOrder = {
+    "student", "grade"
 })
-public class 学生年级类型 {
+public class StudentGradeType {
 
     @XmlElement(required = true)
-    protected 学生信息类型 学生;
+    protected StudentInfo student;
     @XmlAttribute
-    protected 年级类型 年级;
+    protected GradeType grade;
 
-    /**
-     * 获取学生属性的值。
-     * 
-     * @return
-     *     possible object is
-     *     {@link 学生信息类型 }
-     *     
-     */
-    public 学生信息类型 get学生() {
-        return 学生;
+    public StudentInfo getStudent() {
+        return student;
     }
 
-    /**
-     * 设置学生属性的值。
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link 学生信息类型 }
-     *     
-     */
-    public void set学生(学生信息类型 value) {
-        this.学生 = value;
+    public void setStudent(StudentInfo student) {
+        this.student = student;
     }
 
-    /**
-     * 获取年级属性的值。
-     * 
-     * @return
-     *     possible object is
-     *     {@link 年级类型 }
-     *     
-     */
-    public 年级类型 get年级() {
-        return 年级;
+    public GradeType getGrade() {
+        return grade;
     }
 
-    /**
-     * 设置年级属性的值。
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link 年级类型 }
-     *     
-     */
-    public void set年级(年级类型 value) {
-        this.年级 = value;
+    public void setGrade(GradeType grade) {
+        this.grade = grade;
     }
-
 }

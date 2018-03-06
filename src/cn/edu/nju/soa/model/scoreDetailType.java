@@ -25,7 +25,7 @@ import javax.xml.bind.annotation.XmlType;
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="课程成绩列表" type="{http://jw.nju.edu.cn/schema}课程成绩列表类型"/>
+ *         &lt;element name="课程成绩列表" type="{http://jw.nju.edu.cn/schema}CourseScoreList"/>
  *       &lt;/sequence>
  *       &lt;attribute name="学期" type="{http://jw.nju.edu.cn/schema}学期类型" />
  *     &lt;/restriction>
@@ -36,26 +36,26 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u6210\u7ee9\u8be6\u60c5\u7c7b\u578b", propOrder = {
+@XmlType(name = "成绩详情类型", propOrder = {
     "\u8bfe\u7a0b\u6210\u7ee9\u5217\u8868"
 })
-public class 成绩详情类型 {
+public class scoreDetailType {
 
     @XmlElement(required = true)
-    protected 课程成绩列表类型 课程成绩列表;
+    protected CourseScoreList scoreList;
     @XmlAttribute
-    protected 学期类型 学期;
+    protected 学期类型 semester;
 
     /**
      * 获取课程成绩列表属性的值。
      * 
      * @return
      *     possible object is
-     *     {@link 课程成绩列表类型 }
+     *     {@link CourseScoreList }
      *     
      */
-    public 课程成绩列表类型 get课程成绩列表() {
-        return 课程成绩列表;
+    public CourseScoreList getScoreList() {
+        return scoreList;
     }
 
     /**
@@ -63,11 +63,11 @@ public class 成绩详情类型 {
      * 
      * @param value
      *     allowed object is
-     *     {@link 课程成绩列表类型 }
+     *     {@link CourseScoreList }
      *     
      */
-    public void set课程成绩列表(课程成绩列表类型 value) {
-        this.课程成绩列表 = value;
+    public void setScoreList(CourseScoreList value) {
+        this.scoreList = value;
     }
 
     /**
@@ -78,8 +78,8 @@ public class 成绩详情类型 {
      *     {@link 学期类型 }
      *     
      */
-    public 学期类型 get学期() {
-        return 学期;
+    public 学期类型 getSemester() {
+        return semester;
     }
 
     /**
@@ -90,8 +90,8 @@ public class 成绩详情类型 {
      *     {@link 学期类型 }
      *     
      */
-    public void set学期(学期类型 value) {
-        this.学期 = value;
+    public void setSemester(学期类型 value) {
+        this.semester = value;
     }
 
 }

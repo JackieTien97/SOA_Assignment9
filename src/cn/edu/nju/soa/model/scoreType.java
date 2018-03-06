@@ -35,15 +35,15 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u6210\u7ee9\u7c7b\u578b", propOrder = {
+@XmlType(name = "成绩类型", propOrder = {
     "\u5b66\u53f7",
     "\u5f97\u5206"
 })
-public class 成绩类型 {
+public class scoreType {
 
     @XmlElement(required = true)
-    protected String 学号;
-    protected int 得分;
+    protected String schoolNum;
+    protected int score;
 
     /**
      * 获取学号属性的值。
@@ -53,8 +53,8 @@ public class 成绩类型 {
      *     {@link String }
      *     
      */
-    public String get学号() {
-        return 学号;
+    public String getSchoolNum() {
+        return schoolNum;
     }
 
     /**
@@ -65,24 +65,24 @@ public class 成绩类型 {
      *     {@link String }
      *     
      */
-    public void set学号(String value) {
-        this.学号 = value;
+    public void setSchoolNum(String value) {
+        this.schoolNum = value;
     }
 
     /**
      * 获取得分属性的值。
      * 
      */
-    public int get得分() {
-        return 得分;
+    public int getScore() {
+        return score;
     }
 
     /**
      * 设置得分属性的值。
      * 
      */
-    public void set得分(int value) {
-        this.得分 = value;
+    public void setScore(int value) {
+        this.score = value;
     }
 
 }
