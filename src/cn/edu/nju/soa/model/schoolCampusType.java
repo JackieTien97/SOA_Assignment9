@@ -27,19 +27,35 @@ import javax.xml.bind.annotation.XmlType;
  * </pre>
  * 
  */
-@XmlType(name = "\u6821\u533a\u7c7b\u578b", namespace = "http://www.nju.edu.cn/schema")
+@XmlType(name = "校区类型", namespace = "http://www.nju.edu.cn/schema")
 @XmlEnum
-public enum 校区类型 {
+public enum schoolCampusType {
 
-    鼓楼,
-    仙林;
+    GULOU,
+    XIANLIN;
 
     public String value() {
-        return name();
+        String name="";
+        switch (this){
+            case GULOU:
+                name =  "鼓楼";
+                break;
+            case XIANLIN:
+                name =  "仙林";
+        }
+        return name;
     }
 
-    public static 校区类型 fromValue(String v) {
-        return valueOf(v);
+    public static schoolCampusType fromValue(String v) {
+        schoolCampusType type = null;
+        switch(v){
+            case "鼓楼":
+                type = schoolCampusType.GULOU;
+                break;
+            case "仙林":
+                type = schoolCampusType.XIANLIN;
+        }
+        return type;
     }
 
 }

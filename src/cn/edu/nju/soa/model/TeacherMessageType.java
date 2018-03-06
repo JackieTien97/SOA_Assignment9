@@ -41,7 +41,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u6559\u5e08\u4fe1\u606f\u7c7b\u578b", propOrder = {
+@XmlType(name = "教师信息类型", propOrder = {
     "\u6559\u5de5\u53f7",
     "\u6559\u5e08\u540d\u79f0",
     "\u5e74\u9f84",
@@ -49,22 +49,22 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "\u9662\u7cfb",
     "\u804c\u79f0"
 })
-public class 教师信息类型 {
+public class teacherMessageType {
 
     @XmlElement(required = true)
-    protected String 教工号;
+    protected String teacherNum;
     @XmlElement(required = true)
-    protected String 教师名称;
+    protected String teacherName;
     @XmlSchemaType(name = "integer")
-    protected int 年龄;
+    protected int age;
     @XmlElement(required = true)
     @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar 入职年份;
+    protected XMLGregorianCalendar yearOfInduction;
     @XmlElement(required = true)
-    protected String 院系;
+    protected String college;
     @XmlElement(required = true)
     @XmlSchemaType(name = "string")
-    protected 职称类型 职称;
+    protected TitleType title;
 
     /**
      * 获取教工号属性的值。
@@ -74,8 +74,8 @@ public class 教师信息类型 {
      *     {@link String }
      *     
      */
-    public String get教工号() {
-        return 教工号;
+    public String getTeacherNum() {
+        return teacherNum;
     }
 
     /**
@@ -86,8 +86,8 @@ public class 教师信息类型 {
      *     {@link String }
      *     
      */
-    public void set教工号(String value) {
-        this.教工号 = value;
+    public void setTeacherNum(String value) {
+        this.teacherNum = value;
     }
 
     /**
@@ -98,8 +98,8 @@ public class 教师信息类型 {
      *     {@link String }
      *     
      */
-    public String get教师名称() {
-        return 教师名称;
+    public String getTeacherName() {
+        return teacherName;
     }
 
     /**
@@ -110,24 +110,24 @@ public class 教师信息类型 {
      *     {@link String }
      *     
      */
-    public void set教师名称(String value) {
-        this.教师名称 = value;
+    public void setTeacherName(String value) {
+        this.teacherName = value;
     }
 
     /**
      * 获取年龄属性的值。
      * 
      */
-    public int get年龄() {
-        return 年龄;
+    public int getAge() {
+        return age;
     }
 
     /**
      * 设置年龄属性的值。
      * 
      */
-    public void set年龄(int value) {
-        this.年龄 = value;
+    public void setAge(int value) {
+        this.age = value;
     }
 
     /**
@@ -138,8 +138,8 @@ public class 教师信息类型 {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public XMLGregorianCalendar get入职年份() {
-        return 入职年份;
+    public XMLGregorianCalendar getYearOfInduction() {
+        return yearOfInduction;
     }
 
     /**
@@ -150,8 +150,8 @@ public class 教师信息类型 {
      *     {@link XMLGregorianCalendar }
      *     
      */
-    public void set入职年份(XMLGregorianCalendar value) {
-        this.入职年份 = value;
+    public void setYearOfInduction(XMLGregorianCalendar value) {
+        this.yearOfInduction = value;
     }
 
     /**
@@ -162,8 +162,8 @@ public class 教师信息类型 {
      *     {@link String }
      *     
      */
-    public String get院系() {
-        return 院系;
+    public String getCollege() {
+        return college;
     }
 
     /**
@@ -174,8 +174,8 @@ public class 教师信息类型 {
      *     {@link String }
      *     
      */
-    public void set院系(String value) {
-        this.院系 = value;
+    public void setCollege(String value) {
+        this.college = value;
     }
 
     /**
@@ -183,11 +183,11 @@ public class 教师信息类型 {
      * 
      * @return
      *     possible object is
-     *     {@link 职称类型 }
+     *     {@link TitleType }
      *     
      */
-    public 职称类型 get职称() {
-        return 职称;
+    public TitleType getTitle() {
+        return title;
     }
 
     /**
@@ -195,11 +195,11 @@ public class 教师信息类型 {
      * 
      * @param value
      *     allowed object is
-     *     {@link 职称类型 }
+     *     {@link TitleType }
      *     
      */
-    public void set职称(职称类型 value) {
-        this.职称 = value;
+    public void setTitle(TitleType value) {
+        this.title = value;
     }
 
 }
