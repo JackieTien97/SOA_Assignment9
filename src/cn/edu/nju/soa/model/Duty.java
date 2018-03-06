@@ -33,35 +33,16 @@ import javax.xml.bind.annotation.XmlType;
 public enum Duty {
 
 
-    STUDENT,
-    TEACHER,
-    STAFF;
+    职工,
+    学生,
+    老师;
 
     public String value() {
-        switch (this) {
-            case STAFF:
-                return "职工";
-            case STUDENT:
-                return "学生";
-            case TEACHER:
-                return "老师";
-            default:
-                return null;
-        }
+        return name();
     }
 
     public static Duty fromValue(String v) {
-        switch (v) {
-            case "学生":
-                return STUDENT;
-            case "老师":
-                return TEACHER;
-            case "职工":
-                return STAFF;
-            default:
-                return null;
-        }
-
+        return valueOf(v);
     }
 
 }

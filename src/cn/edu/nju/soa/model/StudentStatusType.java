@@ -31,29 +31,15 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum StudentStatusType {
 
-    YES,
-    NO;
+    是,
+    否;
 
     public String value() {
-        switch (this) {
-            case YES:
-                return "是";
-            case NO:
-                return "否";
-            default:
-                return null;
-        }
+        return name();
     }
 
     public static StudentStatusType fromValue(String v) {
-        switch (v) {
-            case "是":
-                return YES;
-            case "否":
-                return NO;
-            default:
-                return null;
-        }
+        return valueOf(v);
     }
 
 }

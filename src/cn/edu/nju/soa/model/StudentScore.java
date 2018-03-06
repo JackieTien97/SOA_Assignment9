@@ -8,11 +8,8 @@
 
 package cn.edu.nju.soa.model;
 
-import java.util.ArrayList;
+import javax.xml.bind.annotation.*;
 import java.util.List;
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlType;
 
 
 /**
@@ -40,6 +37,7 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class StudentScore {
 
+    @XmlElements(value = @XmlElement(name = "成绩详情", namespace = Namespace.JW_URI))
     protected List<cn.edu.nju.soa.model.ScoreDetailType> scoreDetail;
 
     public List<cn.edu.nju.soa.model.ScoreDetailType> getScoreDetail() {

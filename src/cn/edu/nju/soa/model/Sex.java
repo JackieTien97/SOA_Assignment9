@@ -31,29 +31,15 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum Sex {
 
-    MALE,
-    FEMALE;
+    男,
+    女;
 
     public String value() {
-        switch (this) {
-            case MALE:
-                return "男";
-            case FEMALE:
-                return "女";
-            default:
-                return null;
-        }
+        return name();
     }
 
     public static Sex fromValue(String v) {
-        switch (v) {
-            case "男":
-                return MALE;
-            case "女":
-                return FEMALE;
-            default:
-                return null;
-        }
+        return valueOf(v);
     }
 
 }

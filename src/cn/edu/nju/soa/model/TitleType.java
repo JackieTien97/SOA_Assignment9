@@ -32,40 +32,16 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum TitleType {
 
-    PROFESSOR,
-    VICEPROFESSOR,
-    TEACHER;
+    教授,
+    副教授,
+    讲师;
 
     public String value() {
-        String name="";
-        switch (this){
-            case PROFESSOR:
-                name =  "教授";
-                break;
-            case VICEPROFESSOR:
-                name =  "副教授";
-                break;
-            case TEACHER:
-                name =  "讲师";
-                break;
-        }
-        return name;
+        return name();
     }
 
     public static TitleType fromValue(String v) {
-        TitleType type = null;
-        switch(v){
-            case "教授":
-                type = TitleType.PROFESSOR;
-                break;
-            case "副教授":
-                type = TitleType.VICEPROFESSOR;
-                break;
-            case "讲师":
-                type = TitleType.TEACHER;
-                break;
-        }
-        return type;
+        return valueOf(v);
     }
 
 }

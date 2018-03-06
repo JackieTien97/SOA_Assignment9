@@ -8,10 +8,7 @@
 
 package cn.edu.nju.soa.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import java.util.List;
 
 
@@ -41,7 +38,8 @@ import java.util.List;
 })
 public class StudentList {
 
-    protected List<cn.edu.nju.soa.model.StudentInfo> students;
+    @XmlElements(value = @XmlElement(name = "院系学生", namespace = Namespace.JW_URI))
+    protected List<cn.edu.nju.soa.model.DepartmentStu> students;
 
     public List<cn.edu.nju.soa.model.DepartmentStu> getStudents() {
         return students;

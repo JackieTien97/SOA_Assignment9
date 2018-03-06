@@ -31,31 +31,15 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum SchoolCampusType {
 
-    GULOU,
-    XIANLIN;
+    鼓楼,
+    仙林;
 
     public String value() {
-        String name="";
-        switch (this){
-            case GULOU:
-                name =  "鼓楼";
-                break;
-            case XIANLIN:
-                name =  "仙林";
-        }
-        return name;
+        return name();
     }
 
-    public static cn.edu.nju.soa.model.SchoolCampusType fromValue(String v) {
-        cn.edu.nju.soa.model.SchoolCampusType type = null;
-        switch(v){
-            case "鼓楼":
-                type = cn.edu.nju.soa.model.SchoolCampusType.GULOU;
-                break;
-            case "仙林":
-                type = cn.edu.nju.soa.model.SchoolCampusType.XIANLIN;
-        }
-        return type;
+    public static SchoolCampusType fromValue(String v) {
+        return valueOf(v);
     }
 
 }

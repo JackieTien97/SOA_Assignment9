@@ -37,59 +37,21 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum Semester {
 
-    FRESHMAN_FIRST_SEMESTER,
-    FRESHMAN_SECOND_SEMESTER,
-    SOPHOMORE_FIRST_SEMESTER,
-    SOPHOMORE_SECOND_SEMESTER,
-    JUNIOR_FIRST_SEMESTER,
-    JUNIOR_SECOND_SEMESTER,
-    SENIOR_FIRST_SEMESTER,
-    SENIOR_SECOND_SEMESTER;
+    大一第一学期,
+    大一第二学期,
+    大二第一学期,
+    大二第二学期,
+    大三第一学期,
+    大三第二学期,
+    大四第一学期,
+    大四第二学期;
 
     public String value() {
-        switch (this) {
-            case FRESHMAN_FIRST_SEMESTER:
-                return "大一第一学期";
-            case FRESHMAN_SECOND_SEMESTER:
-                return "大一第二学期";
-            case SOPHOMORE_FIRST_SEMESTER:
-                return "大二第一学期";
-            case SOPHOMORE_SECOND_SEMESTER:
-                return "大二第二学期";
-            case JUNIOR_FIRST_SEMESTER:
-                return "大三第一学期";
-            case JUNIOR_SECOND_SEMESTER:
-                return "大三第二学期";
-            case SENIOR_FIRST_SEMESTER:
-                return "大四第一学期";
-            case SENIOR_SECOND_SEMESTER:
-                return "大四第二学期";
-            default:
-                return null;
-        }
+        return name();
     }
 
     public static Semester fromValue(String v) {
-        switch (v) {
-            case "大一第一学期":
-                return FRESHMAN_FIRST_SEMESTER;
-            case "大一第二学期":
-                return FRESHMAN_SECOND_SEMESTER;
-            case "大二第一学期":
-                return SOPHOMORE_FIRST_SEMESTER;
-            case "大二第二学期":
-                return SOPHOMORE_SECOND_SEMESTER;
-            case "大三第一学期":
-                return JUNIOR_FIRST_SEMESTER;
-            case "大三第二学期":
-                return JUNIOR_SECOND_SEMESTER;
-            case "大四第一学期":
-                return SENIOR_FIRST_SEMESTER;
-            case "大四第二学期":
-                return SENIOR_SECOND_SEMESTER;
-            default:
-                return null;
-        }
+        return valueOf(v);
     }
 
 }

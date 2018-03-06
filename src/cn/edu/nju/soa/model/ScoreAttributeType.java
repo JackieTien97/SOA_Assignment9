@@ -34,54 +34,18 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum ScoreAttributeType {
 
-    NORMOL,
-    HOMEWORK,
-    MIDTERM,
-    FINAL,
-    TOTAL;
+    平时成绩,
+    作业成绩,
+    期中成绩,
+    期末成绩,
+    总评成绩;
 
     public String value() {
-        String name="";
-        switch (this){
-            case NORMOL:
-                name =  "平时成绩";
-                break;
-            case HOMEWORK:
-                name =  "作业成绩";
-                break;
-            case MIDTERM:
-                name =  "期中成绩";
-                break;
-            case FINAL:
-                name =  "期末成绩";
-                break;
-            case TOTAL:
-                name =  "总评成绩";
-                break;
-        }
-        return name;
+        return name();
     }
 
-    public static cn.edu.nju.soa.model.ScoreAttributeType fromValue(String v) {
-        cn.edu.nju.soa.model.ScoreAttributeType type = null;
-        switch(v){
-            case "平时成绩":
-                type = cn.edu.nju.soa.model.ScoreAttributeType.NORMOL;
-                break;
-            case "作业成绩":
-                type = cn.edu.nju.soa.model.ScoreAttributeType.HOMEWORK;
-                break;
-            case "期中成绩":
-                type = cn.edu.nju.soa.model.ScoreAttributeType.MIDTERM;
-                break;
-            case "期末成绩":
-                type = cn.edu.nju.soa.model.ScoreAttributeType.FINAL;
-                break;
-            case "总评成绩":
-                type = cn.edu.nju.soa.model.ScoreAttributeType.TOTAL;
-                break;
-        }
-        return type;
+    public static ScoreAttributeType fromValue(String v) {
+        return valueOf(v);
     }
 
 }

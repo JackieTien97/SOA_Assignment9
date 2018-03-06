@@ -8,9 +8,9 @@
 
 package cn.edu.nju.soa.model;
 
+import javax.xml.bind.annotation.*;
 import java.util.ArrayList;
 import java.util.List;
-import javax.xml.bind.annotation.*;
 
 
 /**
@@ -71,6 +71,10 @@ public class DepartmentStu {
             stuGrade = new ArrayList<cn.edu.nju.soa.model.StudentGrade>();
         }
         return this.stuGrade;
+    }
+
+    public void setStuGrade(List<cn.edu.nju.soa.model.StudentGrade> stuGrade) {
+        this.stuGrade = stuGrade;
     }
 
     /**

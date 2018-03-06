@@ -32,34 +32,16 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum CourseType {
 
-    KERNEL,
-    PLATFORM,
-    OPTIONAL;
+    核心,
+    平台,
+    选修;
 
     public String value() {
-        String name="";
-        switch (this){
-            case KERNEL:
-                name="核心";
-            case PLATFORM:
-                name="平台";
-            case OPTIONAL:
-                name="选修";
-        }
-        return name;
+        return name();
     }
 
     public static cn.edu.nju.soa.model.CourseType fromValue(String v) {
-        CourseType type=null;
-        switch (v){
-            case "核心":
-                type=CourseType.KERNEL;
-            case "平台":
-                type=CourseType.PLATFORM;
-            case "选修":
-                type=CourseType.OPTIONAL;
-        }
-        return type;
+       return valueOf(v);
     }
 
 }

@@ -43,39 +43,17 @@ import javax.xml.bind.annotation.XmlType;
 @XmlEnum
 public enum GradeType {
 
-    FRESHMAN,
-    SOPHOMORE,
-    JUNIOR,
-    SENIORYEAR;
+    大一,
+    大二,
+    大三,
+    大四;
 
     public String value() {
-        switch (this) {
-            case FRESHMAN:
-                return "大一";
-            case SOPHOMORE:
-                return "大二";
-            case JUNIOR:
-                return "大三";
-            case SENIORYEAR:
-                return "大四";
-            default:
-                return null;
-        }
+        return name();
     }
 
     public static GradeType fromValue(String v) {
-        switch (v) {
-            case "大一":
-                return FRESHMAN;
-            case "大二":
-                return SOPHOMORE;
-            case "大三":
-                return JUNIOR;
-            case "大四":
-                return SENIORYEAR;
-            default:
-                return null;
-        }
+        return valueOf(v);
     }
 
 }

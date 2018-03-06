@@ -8,11 +8,7 @@
 
 package cn.edu.nju.soa.model;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlAttribute;
-import javax.xml.bind.annotation.XmlElement;
-import javax.xml.bind.annotation.XmlType;
+import javax.xml.bind.annotation.*;
 import java.util.List;
 
 
@@ -42,7 +38,7 @@ import java.util.List;
 })
 public class StudentGrade {
 
-    @XmlElement(name="学生", required = true)
+    @XmlElements(value = {@XmlElement(name = "学生", namespace = Namespace.JW_URI)})
     protected List<StudentInfo> student;
     @XmlAttribute(name="年级")
     protected GradeType grade;

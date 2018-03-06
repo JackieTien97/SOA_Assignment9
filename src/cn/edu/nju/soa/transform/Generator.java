@@ -2,10 +2,6 @@ package cn.edu.nju.soa.transform;
 
 
 import cn.edu.nju.soa.model.*;
-import cn.edu.nju.soa.model.DepartmentStu;
-import cn.edu.nju.soa.model.StudentGrade;
-import cn.edu.nju.soa.model.StudentInfo;
-import cn.edu.nju.soa.model.StudentList;
 
 import javax.xml.datatype.DatatypeConfigurationException;
 import java.io.*;
@@ -35,8 +31,11 @@ public class Generator {
         DepartmentStu departmentStu=new DepartmentStu();
         cn.edu.nju.soa.model.StudentGrade sg=new StudentGrade();
         sg.setStudent(stus);
-        sg.setGrade(cn.edu.nju.soa.model.GradeType.SENIORYEAR);
+        sg.setGrade(GradeType.大三);
         departmentStu.setDepartmentId("1250");
+        List<cn.edu.nju.soa.model.StudentGrade> studentGrades = new ArrayList<>();
+        studentGrades.add(sg);
+        departmentStu.setStuGrade(studentGrades);
         List<DepartmentStu> departmentStus=new ArrayList<>();
         departmentStus.add(departmentStu);
         studentList.setStudents(departmentStus);

@@ -77,7 +77,7 @@ public class ScoreDetailType {
         courseScores.add(score);
         this.scoreList.setCourseScore(courseScores);
 
-        this.semester= cn.edu.nju.soa.model.Semester.FRESHMAN_FIRST_SEMESTER;
+        this.semester= Semester.大一第一学期;
     }
 
     public CourseScoreList getScoreList() {
