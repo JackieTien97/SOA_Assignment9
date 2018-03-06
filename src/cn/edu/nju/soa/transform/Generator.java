@@ -12,7 +12,7 @@ import java.util.List;
 public class Generator {
     private final static String path="./data";
 
-    public static cn.edu.nju.soa.model.StudentListType generateData() throws FileNotFoundException {
+    public static cn.edu.nju.soa.model.StudentList generateData() throws FileNotFoundException {
         File file=new File(path);
         File[] files=file.listFiles();
 
@@ -29,7 +29,8 @@ public class Generator {
         }
 
         cn.edu.nju.soa.model.StudentList studentList=new StudentList();
-        return new cn.edu.nju.soa.model.StudentList(stus);
+        studentList.setFacultyStudents(stus);
+        return studentList;
     }
 
     private static StudentInfo getStudent(File file){

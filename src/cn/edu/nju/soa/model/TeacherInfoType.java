@@ -49,7 +49,7 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "college",
     "title"
 })
-public class TeacherMessageType {
+public class TeacherInfoType {
 
     @XmlElement(required = true)
     protected String teacherNum;
