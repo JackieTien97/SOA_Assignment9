@@ -35,40 +35,18 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u5b66\u751f\u5217\u8868\u7c7b\u578b", propOrder = {
-    "\u9662\u7cfb\u5b66\u751f"
+@XmlType(name = "学生列表类型", namespace = Namespace.JW_URI, propOrder = {
+    "facultyStudents"
 })
-public class 学生列表类型 {
+public class StudentListType {
 
-    protected List<院系学生类型> 院系学生;
+    protected List<DepartmentStu> facultyStudents;
 
-    /**
-     * Gets the value of the 院系学生 property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the 院系学生 property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    get院系学生().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link 院系学生类型 }
-     * 
-     * 
-     */
-    public List<院系学生类型> get院系学生() {
-        if (院系学生 == null) {
-            院系学生 = new ArrayList<院系学生类型>();
-        }
-        return this.院系学生;
+    public List<DepartmentStu> getFacultyStudents() {
+        return facultyStudents;
     }
 
+    public void setFacultyStudents(List<DepartmentStu> facultyStudents) {
+        this.facultyStudents = facultyStudents;
+    }
 }

@@ -35,40 +35,18 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u5b66\u751f\u6210\u7ee9\u7c7b\u578b", propOrder = {
-    "\u6210\u7ee9\u8be6\u60c5"
+@XmlType(name = "学生成绩类型", namespace = Namespace.JW_URI, propOrder = {
+    "scoreDetail"
 })
-public class 学生成绩类型 {
+public class StudentScoreType {
 
-    protected List<成绩详情类型> 成绩详情;
+    protected List<scoreDetailType> scoreDetail;
 
-    /**
-     * Gets the value of the 成绩详情 property.
-     * 
-     * <p>
-     * This accessor method returns a reference to the live list,
-     * not a snapshot. Therefore any modification you make to the
-     * returned list will be present inside the JAXB object.
-     * This is why there is not a <CODE>set</CODE> method for the 成绩详情 property.
-     * 
-     * <p>
-     * For example, to add a new item, do as follows:
-     * <pre>
-     *    get成绩详情().add(newItem);
-     * </pre>
-     * 
-     * 
-     * <p>
-     * Objects of the following type(s) are allowed in the list
-     * {@link 成绩详情类型 }
-     * 
-     * 
-     */
-    public List<成绩详情类型> get成绩详情() {
-        if (成绩详情 == null) {
-            成绩详情 = new ArrayList<成绩详情类型>();
-        }
-        return this.成绩详情;
+    public List<scoreDetailType> getScoreDetail() {
+        return scoreDetail;
     }
 
+    public void setScoreDetail(List<scoreDetailType> scoreDetail) {
+        this.scoreDetail = scoreDetail;
+    }
 }
