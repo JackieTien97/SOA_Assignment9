@@ -75,7 +75,7 @@ public class StudentInfo {
         studentBasicInfo.setMajor(infoStr.get(7));
         studentScores=new cn.edu.nju.soa.model.StudentScore();
 
-        List<>
+        List<S>
         for(int i=8;i<infoStr.size();i++){
             scores.add(infoStr.get(i));
         }
