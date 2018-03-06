@@ -32,10 +32,10 @@ import javax.xml.bind.annotation.XmlType;
 
 /**
  * 年级类型 GradeType
- * 学生基本信息类型 StudentBasicInformationType
- * 学生年级类型 StudentGradeType
- * 学生列表类型 StudentListType
- * 学生成绩类型 StudentScoreType
+ * 学生基本信息类型 StudentBasicInformation
+ * 学生年级类型 StudentGrade
+ * 学生列表类型 StudentList
+ * 学生成绩类型 StudentScore
  * 学籍状态类型 StudentStatusType
  */
 

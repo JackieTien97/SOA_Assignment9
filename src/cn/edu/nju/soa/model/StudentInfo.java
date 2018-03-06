@@ -42,19 +42,19 @@ import javax.xml.bind.annotation.XmlType;
 public class StudentInfo {
 
     @XmlElement(name = "学生基本信息", namespace = Namespace.JW_URI, required = true)
-    protected StudentBasicInformationType studentBasicInfo;
+    protected StudentBasicInformation studentBasicInfo;
     @XmlElement(name = "学生成绩", namespace = Namespace.JW_URI, required = true)
-    protected StudentScoreType studentScores;
+    protected StudentScore studentScores;
 
     /**
      * 获取学生基本信息属性的值。
      * 
      * @return
      *     possible object is
-     *     {@link StudentBasicInformationType }
+     *     {@link StudentBasicInformation }
      *     
      */
-    public StudentBasicInformationType getStudentBasicInfo() {
+    public StudentBasicInformation getStudentBasicInfo() {
         return studentBasicInfo;
     }
 
@@ -63,10 +63,10 @@ public class StudentInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link StudentBasicInformationType }
+     *     {@link StudentBasicInformation }
      *     
      */
-    public void setStudentBasicInfo(StudentBasicInformationType value) {
+    public void setStudentBasicInfo(StudentBasicInformation value) {
         this.studentBasicInfo = value;
     }
 
@@ -75,10 +75,10 @@ public class StudentInfo {
      * 
      * @return
      *     possible object is
-     *     {@link StudentScoreType }
+     *     {@link StudentScore }
      *     
      */
-    public StudentScoreType getStudentScores() {
+    public StudentScore getStudentScores() {
         return studentScores;
     }
 
@@ -87,10 +87,10 @@ public class StudentInfo {
      * 
      * @param value
      *     allowed object is
-     *     {@link StudentScoreType }
+     *     {@link StudentScore }
      *     
      */
-    public void setStudentScores(StudentScoreType value) {
+    public void setStudentScores(StudentScore value) {
         this.studentScores = value;
     }
 
