@@ -1,10 +1,10 @@
 package cn.edu.nju.soa.transform;
 
 
-import cn.edu.nju.soa.model.DepartmentStu;
 import cn.edu.nju.soa.model.StudentInfo;
 import cn.edu.nju.soa.model.StudentList;
 
+import javax.xml.datatype.DatatypeConfigurationException;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
@@ -29,7 +29,7 @@ public class Generator {
         }
 
         cn.edu.nju.soa.model.StudentList studentList=new StudentList();
-        studentList.setFacultyStudents(stus);
+        studentList.setStudents(stus);
         return studentList;
     }
 
@@ -46,6 +46,9 @@ public class Generator {
             return student;
         }catch (IOException ioe){
             ioe.printStackTrace();
+            return null;
+        } catch (DatatypeConfigurationException e) {
+            e.printStackTrace();
             return null;
         }
     }
