@@ -51,18 +51,18 @@ import javax.xml.datatype.XMLGregorianCalendar;
 })
 public class TeacherInfoType {
 
-    @XmlElement(required = true)
+    @XmlElement(name="教工号", required = true)
     protected String teacherNum;
-    @XmlElement(required = true)
+    @XmlElement(name="教师名称", required = true)
     protected String teacherName;
-    @XmlSchemaType(name = "integer")
+    @XmlElement(name="年龄", required = true)
     protected int age;
-    @XmlElement(required = true)
+    @XmlElement(name="入职年份", required = true)
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar yearOfInduction;
-    @XmlElement(required = true)
+    @XmlElement(name="院系", required = true)
     protected String college;
-    @XmlElement(required = true)
+    @XmlElement(name="职称", required = true)
     @XmlSchemaType(name = "string")
     protected TitleType title;
 
