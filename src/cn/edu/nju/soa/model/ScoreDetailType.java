@@ -13,6 +13,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlAttribute;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
@@ -54,6 +56,23 @@ public class ScoreDetailType {
      *     {@link CourseScoreList }
      *     
      */
+    public ScoreDetailType(){
+
+    }
+
+    public ScoreDetailType(String info){
+        String[] infos=info.split("-");
+        cn.edu.nju.soa.model.CourseScore score=new cn.edu.nju.soa.model.CourseScore();
+        score.setCourseId(infos[0]);
+        List<cn.edu.nju.soa.model.ScoreType> types=new ArrayList<>();
+        cn.edu.nju.soa.model.ScoreType scoreType=new cn.edu.nju.soa.model.ScoreType();
+        scoreType.setSchoolNum(infos[1]);
+        scoreType.setScore(Integer.parseInt(infos[2]));
+        types.add(scoreType);
+        cn.edu.nju.soa.model.CourseScoreList scoreList=new cn.edu.nju.soa.model.CourseScoreList();
+        scoreList.courseScore=score;
+    }
+
     public CourseScoreList getScoreList() {
         return scoreList;
     }

@@ -40,13 +40,13 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class StudentScore {
 
-    protected List<scoreDetailType> scoreDetail;
+    protected List<cn.edu.nju.soa.model.ScoreDetailType> scoreDetail;
 
-    public List<scoreDetailType> getScoreDetail() {
+    public List<cn.edu.nju.soa.model.ScoreDetailType> getScoreDetail() {
         return scoreDetail;
     }
 
-    public void setScoreDetail(List<scoreDetailType> scoreDetail) {
+    public void setScoreDetail(List<cn.edu.nju.soa.model.ScoreDetailType> scoreDetail) {
         this.scoreDetail = scoreDetail;
     }
 }

@@ -51,7 +51,7 @@ public class StudentInfo {
     @XmlElement(name = "学生基本信息", namespace = Namespace.JW_URI, required = true)
     protected cn.edu.nju.soa.model.StudentBasicInformation studentBasicInfo;
     @XmlElement(name = "学生成绩", namespace = Namespace.JW_URI, required = true)
-    protected StudentScore studentScores;
+    protected cn.edu.nju.soa.model.StudentScore studentScores;
 
     public StudentInfo(){
 
@@ -73,12 +73,14 @@ public class StudentInfo {
                 .newXMLGregorianCalendar(gc2));
         studentBasicInfo.setPhone(infoStr.get(6));
         studentBasicInfo.setMajor(infoStr.get(7));
-        studentScores=new cn.edu.nju.soa.model.StudentScore();
 
-        List<S>
+        studentScores=new cn.edu.nju.soa.model.StudentScore();
+        List<cn.edu.nju.soa.model.ScoreDetailType> scoreDetails=new ArrayList<>();
         for(int i=8;i<infoStr.size();i++){
-            scores.add(infoStr.get(i));
+            cn.edu.nju.soa.model.ScoreDetailType detail=new cn.edu.nju.soa.model.ScoreDetailType(infoStr.get(i));
+            scoreDetails.add(detail);
         }
+        studentScores.setScoreDetail(scoreDetails);
 
     }
     /**
