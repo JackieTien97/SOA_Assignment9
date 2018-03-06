@@ -6,7 +6,7 @@
 //
 
 
-package cn.edu.nju.soa.xsd;
+package cn.edu.nju.soa.model;
 
 import java.util.ArrayList;
 import java.util.List;

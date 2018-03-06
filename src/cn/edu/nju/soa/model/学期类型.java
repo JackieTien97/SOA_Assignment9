@@ -6,7 +6,7 @@
 //
 
 
-package cn.edu.nju.soa.xsd;
+package cn.edu.nju.soa.model;
 
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlType;

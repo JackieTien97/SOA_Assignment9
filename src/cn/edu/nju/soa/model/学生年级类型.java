@@ -6,7 +6,7 @@
 //
 
 
-package cn.edu.nju.soa.xsd;
+package cn.edu.nju.soa.model;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -16,18 +16,18 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>成绩详情类型 complex type的 Java 类。
+ * <p>学生年级类型 complex type的 Java 类。
  * 
  * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
- * &lt;complexType name="成绩详情类型">
+ * &lt;complexType name="学生年级类型">
  *   &lt;complexContent>
  *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
  *       &lt;sequence>
- *         &lt;element name="课程成绩列表" type="{http://jw.nju.edu.cn/schema}课程成绩列表类型"/>
+ *         &lt;element name="学生" type="{http://jw.nju.edu.cn/schema}学生信息类型"/>
  *       &lt;/sequence>
- *       &lt;attribute name="学期" type="{http://jw.nju.edu.cn/schema}学期类型" />
+ *       &lt;attribute name="年级" type="{http://jw.nju.edu.cn/schema}年级类型" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -36,62 +36,62 @@ import javax.xml.bind.annotation.XmlType;
  * 
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "\u6210\u7ee9\u8be6\u60c5\u7c7b\u578b", propOrder = {
-    "\u8bfe\u7a0b\u6210\u7ee9\u5217\u8868"
+@XmlType(name = "\u5b66\u751f\u5e74\u7ea7\u7c7b\u578b", propOrder = {
+    "\u5b66\u751f"
 })
-public class 成绩详情类型 {
+public class 学生年级类型 {
 
     @XmlElement(required = true)
-    protected 课程成绩列表类型 课程成绩列表;
+    protected 学生信息类型 学生;
     @XmlAttribute
-    protected 学期类型 学期;
+    protected 年级类型 年级;
 
     /**
-     * 获取课程成绩列表属性的值。
+     * 获取学生属性的值。
      * 
      * @return
      *     possible object is
-     *     {@link 课程成绩列表类型 }
+     *     {@link 学生信息类型 }
      *     
      */
-    public 课程成绩列表类型 get课程成绩列表() {
-        return 课程成绩列表;
+    public 学生信息类型 get学生() {
+        return 学生;
     }
 
     /**
-     * 设置课程成绩列表属性的值。
+     * 设置学生属性的值。
      * 
      * @param value
      *     allowed object is
-     *     {@link 课程成绩列表类型 }
+     *     {@link 学生信息类型 }
      *     
      */
-    public void set课程成绩列表(课程成绩列表类型 value) {
-        this.课程成绩列表 = value;
+    public void set学生(学生信息类型 value) {
+        this.学生 = value;
     }
 
     /**
-     * 获取学期属性的值。
+     * 获取年级属性的值。
      * 
      * @return
      *     possible object is
-     *     {@link 学期类型 }
+     *     {@link 年级类型 }
      *     
      */
-    public 学期类型 get学期() {
-        return 学期;
+    public 年级类型 get年级() {
+        return 年级;
     }
 
     /**
-     * 设置学期属性的值。
+     * 设置年级属性的值。
      * 
      * @param value
      *     allowed object is
-     *     {@link 学期类型 }
+     *     {@link 年级类型 }
      *     
      */
-    public void set学期(学期类型 value) {
-        this.学期 = value;
+    public void set年级(年级类型 value) {
+        this.年级 = value;
     }
 
 }
