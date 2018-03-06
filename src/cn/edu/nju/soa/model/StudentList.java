@@ -40,13 +40,13 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class StudentList {
 
-    protected List<DepartmentStu> facultyStudents;
+    protected List<cn.edu.nju.soa.model.StudentInfo> facultyStudents;
 
-    public List<DepartmentStu> getFacultyStudents() {
+    public List<cn.edu.nju.soa.model.StudentInfo> getFacultyStudents() {
         return facultyStudents;
     }
 
-    public void setFacultyStudents(List<DepartmentStu> facultyStudents) {
+    public void setFacultyStudents(List<cn.edu.nju.soa.model.StudentInfo> facultyStudents) {
         this.facultyStudents = facultyStudents;
     }
 }
