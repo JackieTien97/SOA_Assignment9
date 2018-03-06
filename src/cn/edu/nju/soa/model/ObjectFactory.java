@@ -31,13 +31,13 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _课程信息_QNAME = new QName("http://jw.nju.edu.cn/schema", "\u8bfe\u7a0b\u4fe1\u606f");
-    private final static QName _学生信息_QNAME = new QName("http://jw.nju.edu.cn/schema", "\u5b66\u751f\u4fe1\u606f");
-    private final static QName _人员信息_QNAME = new QName("http://www.nju.edu.cn/schema", "\u4eba\u5458\u4fe1\u606f");
-    private final static QName _学生列表_QNAME = new QName("http://jw.nju.edu.cn/schema", "\u5b66\u751f\u5217\u8868");
-    private final static QName _课程成绩列表_QNAME = new QName("http://jw.nju.edu.cn/schema", "\u8bfe\u7a0b\u6210\u7ee9\u5217\u8868");
-    private final static QName _教师信息_QNAME = new QName("http://jw.nju.edu.cn/schema", "\u6559\u5e08\u4fe1\u606f");
-    private final static QName _部门信息_QNAME = new QName("http://www.nju.edu.cn/schema", "\u90e8\u95e8\u4fe1\u606f");
+    private final static QName _COURSE_INFO_QNAME = new QName("http://jw.nju.edu.cn/schema", "课程信息");
+    private final static QName _STUDENT_INFO_QNAME = new QName("http://jw.nju.edu.cn/schema", "学生信息");
+    private final static QName _PERSON_INFO_QNAME = new QName("http://www.nju.edu.cn/schema", "人员信息");
+    private final static QName _STUDENT_LIST_QNAME = new QName("http://jw.nju.edu.cn/schema", "学生列表");
+    private final static QName _COURSE_SCORE_LIST_QNAME = new QName("http://jw.nju.edu.cn/schema", "课程成绩列表");
+    private final static QName _TEACHER_INFO_QNAME = new QName("http://jw.nju.edu.cn/schema", "教师信息");
+    private final static QName _DEPARTMENT_INFO_QNAME = new QName("http://www.nju.edu.cn/schema", "部门信息");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: cn.edu.nju.soa.xsd
@@ -47,186 +47,186 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link 课程成绩列表类型 }
+     * Create an instance of {@link CourseScoreList }
      * 
      */
-    public 课程成绩列表类型 create课程成绩列表类型() {
-        return new 课程成绩列表类型();
+    public CourseScoreList createCourseScoreList() {
+        return new CourseScoreList();
     }
 
     /**
-     * Create an instance of {@link 教师信息类型 }
+     * Create an instance of {@link TeacherInfoType }
      * 
      */
-    public 教师信息类型 create教师信息类型() {
-        return new 教师信息类型();
+    public TeacherInfoType createTeacherMessageType() {
+        return new TeacherInfoType();
     }
 
     /**
-     * Create an instance of {@link 学生列表类型 }
+     * Create an instance of {@link StudentList }
      * 
      */
-    public 学生列表类型 create学生列表类型() {
-        return new 学生列表类型();
+    public StudentList createStudentList() {
+        return new StudentList();
     }
 
     /**
-     * Create an instance of {@link 学生信息类型 }
+     * Create an instance of {@link StudentInfo }
      * 
      */
-    public 学生信息类型 create学生信息类型() {
-        return new 学生信息类型();
+    public StudentInfo createStudentInfo() {
+        return new StudentInfo();
     }
 
     /**
-     * Create an instance of {@link 课程信息类型 }
+     * Create an instance of {@link CourseInfo }
      * 
      */
-    public 课程信息类型 create课程信息类型() {
-        return new 课程信息类型();
+    public CourseInfo createCourseInfo() {
+        return new CourseInfo();
     }
 
     /**
-     * Create an instance of {@link 学生年级类型 }
+     * Create an instance of {@link StudentGrade }
      * 
      */
-    public 学生年级类型 create学生年级类型() {
-        return new 学生年级类型();
+    public StudentGrade createStudentGrade() {
+        return new StudentGrade();
     }
 
     /**
-     * Create an instance of {@link 学生成绩类型 }
+     * Create an instance of {@link StudentScore }
      * 
      */
-    public 学生成绩类型 create学生成绩类型() {
-        return new 学生成绩类型();
+    public StudentScore createStudentScore() {
+        return new StudentScore();
     }
 
     /**
-     * Create an instance of {@link 上课时间与地点表类型 }
+     * Create an instance of {@link CourseTimeAndAddress }
      * 
      */
-    public 上课时间与地点表类型 create上课时间与地点表类型() {
-        return new 上课时间与地点表类型();
+    public CourseTimeAndAddress createCourseTimeAndAddress() {
+        return new CourseTimeAndAddress();
     }
 
     /**
-     * Create an instance of {@link 学生基本信息类型 }
+     * Create an instance of {@link StudentBasicInformation }
      * 
      */
-    public 学生基本信息类型 create学生基本信息类型() {
-        return new 学生基本信息类型();
+    public StudentBasicInformation createStudentBasicInformation() {
+        return new StudentBasicInformation();
     }
 
     /**
-     * Create an instance of {@link 课程成绩类型 }
+     * Create an instance of {@link CourseScore }
      * 
      */
-    public 课程成绩类型 create课程成绩类型() {
-        return new 课程成绩类型();
+    public CourseScore createCourseScore() {
+        return new CourseScore();
     }
 
     /**
-     * Create an instance of {@link 成绩详情类型 }
+     * Create an instance of {@link ScoreDetailType }
      * 
      */
-    public 成绩详情类型 create成绩详情类型() {
-        return new 成绩详情类型();
+    public ScoreDetailType createScoreDetailType() {
+        return new ScoreDetailType();
     }
 
     /**
-     * Create an instance of {@link 院系学生类型 }
+     * Create an instance of {@link DepartmentStu }
      * 
      */
-    public 院系学生类型 create院系学生类型() {
-        return new 院系学生类型();
+    public DepartmentStu createDepartmentStu() {
+        return new DepartmentStu();
     }
 
     /**
-     * Create an instance of {@link 成绩类型 }
+     * Create an instance of {@link ScoreType }
      * 
      */
-    public 成绩类型 create成绩类型() {
-        return new 成绩类型();
+    public ScoreType createScoreType() {
+        return new ScoreType();
     }
 
     /**
-     * Create an instance of {@link 部门信息类型 }
+     * Create an instance of {@link DepartmentInfo }
      * 
      */
-    public 部门信息类型 create部门信息类型() {
-        return new 部门信息类型();
+    public DepartmentInfo createDepartmentInfo() {
+        return new DepartmentInfo();
     }
 
     /**
-     * Create an instance of {@link 人员信息类型 }
+     * Create an instance of {@link PersonInfo }
      * 
      */
-    public 人员信息类型 create人员信息类型() {
-        return new 人员信息类型();
+    public PersonInfo createPersonInfo() {
+        return new PersonInfo();
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link 课程信息类型 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CourseInfo }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://jw.nju.edu.cn/schema", name = "\u8bfe\u7a0b\u4fe1\u606f")
-    public JAXBElement<课程信息类型> create课程信息(课程信息类型 value) {
-        return new JAXBElement<课程信息类型>(_课程信息_QNAME, 课程信息类型.class, null, value);
+    @XmlElementDecl(namespace = "http://jw.nju.edu.cn/schema", name = "课程信息")
+    public JAXBElement<CourseInfo> createCourseInfo(CourseInfo value) {
+        return new JAXBElement<CourseInfo>(_COURSE_INFO_QNAME, CourseInfo.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link 学生信息类型 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentInfo }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://jw.nju.edu.cn/schema", name = "\u5b66\u751f\u4fe1\u606f")
-    public JAXBElement<学生信息类型> create学生信息(学生信息类型 value) {
-        return new JAXBElement<学生信息类型>(_学生信息_QNAME, 学生信息类型.class, null, value);
+    @XmlElementDecl(namespace = "http://jw.nju.edu.cn/schema", name = "学生信息")
+    public JAXBElement<StudentInfo> createStudentInfo(StudentInfo value) {
+        return new JAXBElement<StudentInfo>(_STUDENT_INFO_QNAME, StudentInfo.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link 人员信息类型 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link PersonInfo }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.nju.edu.cn/schema", name = "\u4eba\u5458\u4fe1\u606f")
-    public JAXBElement<人员信息类型> create人员信息(人员信息类型 value) {
-        return new JAXBElement<人员信息类型>(_人员信息_QNAME, 人员信息类型.class, null, value);
+    @XmlElementDecl(namespace = "http://www.nju.edu.cn/schema", name = "人员信息")
+    public JAXBElement<PersonInfo> createPersonInfo(PersonInfo value) {
+        return new JAXBElement<PersonInfo>(_PERSON_INFO_QNAME, PersonInfo.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link 学生列表类型 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link StudentList }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://jw.nju.edu.cn/schema", name = "\u5b66\u751f\u5217\u8868")
-    public JAXBElement<学生列表类型> create学生列表(学生列表类型 value) {
-        return new JAXBElement<学生列表类型>(_学生列表_QNAME, 学生列表类型.class, null, value);
+    @XmlElementDecl(namespace = "http://jw.nju.edu.cn/schema", name = "学生列表")
+    public JAXBElement<StudentList> createStudentListType(StudentList value) {
+        return new JAXBElement<StudentList>(_STUDENT_LIST_QNAME, StudentList.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link 课程成绩列表类型 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link CourseScoreList }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://jw.nju.edu.cn/schema", name = "\u8bfe\u7a0b\u6210\u7ee9\u5217\u8868")
-    public JAXBElement<课程成绩列表类型> create课程成绩列表(课程成绩列表类型 value) {
-        return new JAXBElement<课程成绩列表类型>(_课程成绩列表_QNAME, 课程成绩列表类型.class, null, value);
+    @XmlElementDecl(namespace = "http://jw.nju.edu.cn/schema", name = "课程成绩列表")
+    public JAXBElement<CourseScoreList> createCourseScoreList(CourseScoreList value) {
+        return new JAXBElement<CourseScoreList>(_COURSE_SCORE_LIST_QNAME, CourseScoreList.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link 教师信息类型 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link TeacherInfoType }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://jw.nju.edu.cn/schema", name = "\u6559\u5e08\u4fe1\u606f")
-    public JAXBElement<教师信息类型> create教师信息(教师信息类型 value) {
-        return new JAXBElement<教师信息类型>(_教师信息_QNAME, 教师信息类型.class, null, value);
+    @XmlElementDecl(namespace = "http://jw.nju.edu.cn/schema", name = "教师信息")
+    public JAXBElement<TeacherInfoType> createTeacherInfoType(TeacherInfoType value) {
+        return new JAXBElement<TeacherInfoType>(_TEACHER_INFO_QNAME, TeacherInfoType.class, null, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link 部门信息类型 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link DepartmentInfo }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://www.nju.edu.cn/schema", name = "\u90e8\u95e8\u4fe1\u606f")
-    public JAXBElement<部门信息类型> create部门信息(部门信息类型 value) {
-        return new JAXBElement<部门信息类型>(_部门信息_QNAME, 部门信息类型.class, null, value);
+    @XmlElementDecl(namespace = "http://www.nju.edu.cn/schema", name = "部门信息")
+    public JAXBElement<DepartmentInfo> createDepartmentInfo(DepartmentInfo value) {
+        return new JAXBElement<DepartmentInfo>(_DEPARTMENT_INFO_QNAME, DepartmentInfo.class, null, value);
     }
 
 }
