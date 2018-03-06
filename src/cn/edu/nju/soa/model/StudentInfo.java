@@ -77,7 +77,7 @@ public class StudentInfo {
         studentScores=new cn.edu.nju.soa.model.StudentScore();
         List<cn.edu.nju.soa.model.ScoreDetailType> scoreDetails=new ArrayList<>();
         for(int i=8;i<infoStr.size();i++){
-            cn.edu.nju.soa.model.ScoreDetailType detail=new cn.edu.nju.soa.model.ScoreDetailType(infoStr.get(i));
+            cn.edu.nju.soa.model.ScoreDetailType detail=new cn.edu.nju.soa.model.ScoreDetailType(infoStr.get(0),infoStr.get(i));
             scoreDetails.add(detail);
         }
         studentScores.setScoreDetail(scoreDetails);

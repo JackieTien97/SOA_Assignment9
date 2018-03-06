@@ -44,7 +44,7 @@ import java.util.List;
 public class ScoreDetailType {
 
     @XmlElement(required = true)
-    protected CourseScoreList scoreList;
+    protected cn.edu.nju.soa.model.CourseScoreList scoreList;
     @XmlAttribute
     protected Semester semester;
 
@@ -60,17 +60,24 @@ public class ScoreDetailType {
 
     }
 
-    public ScoreDetailType(String info){
+    public ScoreDetailType(String sid,String info){
         String[] infos=info.split("-");
+
         cn.edu.nju.soa.model.CourseScore score=new cn.edu.nju.soa.model.CourseScore();
         score.setCourseId(infos[0]);
-        List<cn.edu.nju.soa.model.ScoreType> types=new ArrayList<>();
+        score.setScoreType(cn.edu.nju.soa.model.ScoreAttributeType.fromValue(infos[1]));
+        List<cn.edu.nju.soa.model.ScoreType> scoreTypes=new ArrayList<>();
         cn.edu.nju.soa.model.ScoreType scoreType=new cn.edu.nju.soa.model.ScoreType();
-        scoreType.setSchoolNum(infos[1]);
         scoreType.setScore(Integer.parseInt(infos[2]));
-        types.add(scoreType);
-        cn.edu.nju.soa.model.CourseScoreList scoreList=new cn.edu.nju.soa.model.CourseScoreList();
-        scoreList.courseScore=score;
+        scoreType.setSchoolNum(sid);
+        score.setScore(scoreType);
+
+        this.scoreList=new cn.edu.nju.soa.model.CourseScoreList();
+        ArrayList<cn.edu.nju.soa.model.CourseScore> courseScores=new ArrayList<>();
+        courseScores.add(score);
+        this.scoreList.setCourseScore(courseScores);
+
+        this.semester= cn.edu.nju.soa.model.Semester.FRESHMAN_FIRST_SEMESTER;
     }
 
     public CourseScoreList getScoreList() {
