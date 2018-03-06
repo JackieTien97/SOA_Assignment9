@@ -1,6 +1,9 @@
 package cn.edu.nju.soa.transform;
 
 
+import cn.edu.nju.soa.model.*;
+import cn.edu.nju.soa.model.DepartmentStu;
+import cn.edu.nju.soa.model.StudentGrade;
 import cn.edu.nju.soa.model.StudentInfo;
 import cn.edu.nju.soa.model.StudentList;
 
@@ -29,7 +32,15 @@ public class Generator {
         }
 
         cn.edu.nju.soa.model.StudentList studentList=new StudentList();
-        studentList.setStudents(stus);
+        DepartmentStu departmentStu=new DepartmentStu();
+        cn.edu.nju.soa.model.StudentGrade sg=new StudentGrade();
+        sg.setStudent(stus);
+        sg.setGrade(cn.edu.nju.soa.model.GradeType.SENIORYEAR);
+        departmentStu.setDepartmentId("1250");
+        List<DepartmentStu> departmentStus=new ArrayList<>();
+        departmentStus.add(departmentStu);
+        studentList.setStudents(departmentStus);
+
         return studentList;
     }
 

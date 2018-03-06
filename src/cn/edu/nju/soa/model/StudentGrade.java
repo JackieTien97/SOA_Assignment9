@@ -41,9 +41,9 @@ import javax.xml.bind.annotation.XmlType;
 })
 public class StudentGrade {
 
-    @XmlElement(required = true)
+    @XmlElement(name="学生", required = true)
     protected StudentInfo student;
-    @XmlAttribute
+    @XmlAttribute(name="年级")
     protected GradeType grade;
 
     public StudentInfo getStudent() {

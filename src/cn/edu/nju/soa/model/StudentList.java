@@ -43,11 +43,11 @@ public class StudentList {
 
     protected List<cn.edu.nju.soa.model.StudentInfo> students;
 
-    public List<StudentInfo> getStudents() {
+    public List<cn.edu.nju.soa.model.DepartmentStu> getStudents() {
         return students;
     }
 
-    public void setStudents(List<StudentInfo> students) {
+    public void setStudents(List<cn.edu.nju.soa.model.DepartmentStu> students) {
         this.students = students;
     }
 }
